@@ -33,7 +33,17 @@ sidebar <- dashboardSidebar(
 )
 
 body <- dashboardBody(
-  customTheme
+  customTheme,
+  tabItems(
+    # Structure for home tab
+    tabItem("home",
+            fluidPage(
+              # Title for home tab
+              titlePanel(strong("Get Set To Discover Melbourne")),
+              hr()
+            )
+    )
+  )
 )
 
 # Putting the UI together
