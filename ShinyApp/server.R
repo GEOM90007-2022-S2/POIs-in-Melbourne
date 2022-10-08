@@ -15,5 +15,10 @@ source('helper.R')
 options(highcharter.theme = hc_theme_hcrt())
 
 shinyServer(function(input, output) {
-
+  
+  output$mymap <- renderLeaflet({
+    leaflet() %>% setView(lat= -37.840935, lng = 144.946457, zoom = 11) %>%
+      addProviderTiles(providers$CartoDB.Voyager,
+                       options = providerTileOptions(noWrap = TRUE))
+  })
 })
