@@ -6,6 +6,7 @@
 library(shiny)
 library(shinythemes)
 library(leaflet)
+library(mapboxapi)
 library(fontawesome)
 library(shinyWidgets)
 library(shinydashboard)
@@ -29,7 +30,10 @@ sidebar <- dashboardSidebar(
     menuItem("Home",
              tabName = "home",
              selected = T,
-             icon = fa_i('fas fa-house'))
+             icon = fa_i('fas fa-house')),
+    menuItem("Point of Interest",
+             tabName = "poi",
+             icon = fa_i('fas fa-map-location-dot'))
   )
 )
 
@@ -76,6 +80,13 @@ body <- dashboardBody(
                  a("Highcharter", 
                    href="https://jkunst.com/highcharter/"), 
                  '(a R wrapper for Highcharts)')
+            )
+    ),
+    tabItem("poi",
+            fluidPage(
+              titlePanel(strong("Point of Interest in Melbourne")),
+              hr(),
+              leafletOutput("poi_viz", height = 800)
             )
     )
   )
