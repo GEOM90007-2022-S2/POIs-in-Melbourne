@@ -47,17 +47,15 @@ body <- dashboardBody(
               titlePanel(strong("Get Set To Discover Melbourne")),
               hr(),
               fluidRow(
-                column(4, div(tags$img(src = 'melbourne_image1.png', height = '320px',
-                                       width = '500px', alt = 'something went wrong',
-                                       deleteFile = FALSE), style = 'text-align: center:')),
-                column(2),
-                column(6, br(), br(), br(), br(), br(),
-                              h4('A perfect blend of rich cultural history and new age trends is 
-                              waiting for you in Melbourne. As the sun goes down, the city comes 
-                              to life with a vibrant dining scene as well as events and exhibitions. 
-                              Explore its bustling laneways, trendy neighbourhoods and sophisticated 
-                              foodie scene to get a taste of what Melbourne is all about.',
-                              style = "color: #808080;font-size:17px;", align = 'right'))
+                includeHTML("home.html"),
+                tags$head(
+                  tags$link(rel = "stylesheet", 
+                            type = "text/css", 
+                            href = "plugins/font-awesome-4.7.0/css/font-awesome.min.css"),
+                  tags$link(rel = "icon", 
+                            type = "image/png", 
+                            href = "images/logo_icon.png")
+                )
               ),
               hr(),
               fluidRow(
