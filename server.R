@@ -24,10 +24,10 @@ shinyServer(function(input, output) {
   
   output$poi_viz <- renderLeaflet({
     leaflet() %>%
-      setView(lat= -37.8244, lng = 144.946457, zoom = 13) %>%
+      setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE)) %>%
-      addAwesomeMarkers(data = wifi_data, ~Longitude, ~Latitude, 
+      addMarkers(data = wifi_data, ~Longitude, ~Latitude, 
                         icon = wifiIcon, group = "Public Wifi Location") %>%
       addCircleMarkers(data = poi_data, ~long, ~lat, 
                        label = ~feature_name, radius = 1, group = "Point of Interest") %>%

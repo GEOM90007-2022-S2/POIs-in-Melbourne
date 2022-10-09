@@ -5,8 +5,14 @@ poi_data <- read.csv('data/cleaned_poi.csv')
 colnames(poi_data) <- c('theme', 'sub_theme', 'feature_name', 'coordinates', 'lat', 'long')
 wifi_data <- read.csv('data/Melbourne_wifi.csv')
 
-wifiIcon <- makeAwesomeIcon(
-  text = fa("wifi")
+#wifiIcon <- makeAwesomeIcon(
+#  text = fa("wifi")
+#)
+
+wifiIcon <- makeIcon(
+  "www/wifi.png",
+  iconWidth = 16,
+  iconHeight = 16
 )
 
 # Theme for dashboard

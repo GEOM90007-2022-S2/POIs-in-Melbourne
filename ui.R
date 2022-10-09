@@ -73,7 +73,7 @@ body <- dashboardBody(
             fluidPage(
               titlePanel(strong("Point of Interest in Melbourne")),
               hr(),
-              leafletOutput("poi_viz", height = 800)
+              leafletOutput("poi_viz", height = 850)
             )
     )
   )
