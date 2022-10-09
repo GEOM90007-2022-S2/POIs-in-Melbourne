@@ -51,10 +51,7 @@ body <- dashboardBody(
                 tags$head(
                   tags$link(rel = "stylesheet", 
                             type = "text/css", 
-                            href = "plugins/font-awesome-4.7.0/css/font-awesome.min.css"),
-                  tags$link(rel = "icon", 
-                            type = "image/png", 
-                            href = "images/logo_icon.png")
+                            href = "plugins/font-awesome-4.7.0/css/font-awesome.min.css")
                 )
               ),
               hr(),
