@@ -6,6 +6,12 @@ colnames(poi_data) <- c('theme', 'sub_theme', 'feature_name', 'coordinates', 'la
 wifi_data <- read.csv('data/Melbourne_wifi.csv')
 city_circle <- read.csv('data/cleaned_city_circle.csv')
 
+poiIcon <- makeIcon(
+  "www/poi.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
 wifiIcon <- makeIcon(
   "www/wifi.png",
   iconWidth = 16,
