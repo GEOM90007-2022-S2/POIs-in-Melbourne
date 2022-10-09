@@ -4,13 +4,16 @@
 poi_data <- read.csv('data/cleaned_poi.csv')
 colnames(poi_data) <- c('theme', 'sub_theme', 'feature_name', 'coordinates', 'lat', 'long')
 wifi_data <- read.csv('data/Melbourne_wifi.csv')
-
-#wifiIcon <- makeAwesomeIcon(
-#  text = fa("wifi")
-#)
+city_circle <- read.csv('data/cleaned_city_circle.csv')
 
 wifiIcon <- makeIcon(
   "www/wifi.png",
+  iconWidth = 16,
+  iconHeight = 16
+)
+
+tramIcon <- makeIcon(
+  "www/tram.png",
   iconWidth = 16,
   iconHeight = 16
 )
