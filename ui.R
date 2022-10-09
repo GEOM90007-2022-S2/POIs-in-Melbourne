@@ -57,14 +57,6 @@ body <- dashboardBody(
               hr(),
               fluidRow(
                 column(12, leafletOutput("mymap")),
-                #column(5, br(), br(), br(), br(), br(),
-                #          h4('In this visualisation kiosk, we aim to help you to get the best
-                #             out of Melbourne!',
-                #          style = "color: #808080;font-size:17px;", align = 'left')),
-                #column(1),
-                #column(5, div(tags$img(src = 'melbourne_image2.png', height = '320px',
-                #                       width = '560px', alt = 'something went wrong',
-                #                       deleteFile = FALSE), style = 'text-align: left:'))
               ),
               hr(),
               h5('Maps are created using ',

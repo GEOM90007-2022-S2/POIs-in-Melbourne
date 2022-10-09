@@ -26,6 +26,7 @@ shinyServer(function(input, output) {
     leaflet() %>%
       setView(lat= -37.8244, lng = 144.946457, zoom = 13) %>%
       addProviderTiles(providers$CartoDB.Voyager,
-                       options = providerTileOptions(noWrap = TRUE))
+                       options = providerTileOptions(noWrap = TRUE)) %>%
+      addMarkers(data = poi_data, ~long, ~lat)
   })
 })

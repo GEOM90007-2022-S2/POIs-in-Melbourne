@@ -1,5 +1,8 @@
 # Helper functions
 
+# Read POI dataset
+poi_data <- read.csv('data/cleaned_poi.csv')
+
 # Theme for dashboard
 customTheme <- shinyDashboardThemeDIY(
   ### general
