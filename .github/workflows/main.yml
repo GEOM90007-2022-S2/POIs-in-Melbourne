@@ -1,0 +1,18 @@
+on: [push, pull_request]
+
+name: deploy-shiny
+
+jobs:
+  deploy-shiny:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@master
+      - name: Install shiny
+        run: |
+          install.packages(c("shiny", "shinydashboard", "shinythemes", "rsconnect", "leaflet", "mapboxapi", "fontawesome", "shinyWidgets", "igraph", "highcharter", "dashboardthemes"), type = "binary")
+        shell: Rscript {0}
+      - name: Push to shiny.io
+        run: |
+          Rscript -e "rsconnect::setAccountInfo(name='ltn3hf-zhi0hern0tom', token=${{secrets.SHINYAPPS_TOKEN}}, secret=${{secrets.SHINYAPPS_SECRET}})"
+          Rscript -e "rsconnect::deployApp(appName = 'POIs-in-Melbourne')" 
