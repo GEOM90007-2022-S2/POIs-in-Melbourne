@@ -19,7 +19,7 @@ code {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background: rgba(111, 109, 109, 0.417);
+	background: black;
 	opacity: .8;
 	padding: 20px;
 	color: white;
@@ -27,7 +27,7 @@ code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: rgb(255, 255, 255);
+	color: #333;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -41,16 +41,14 @@ h1, h2, h3 {
 
 h1 {
 	margin: 50px 0;
-	color: #ffffff;
 }
 
 h1.title{
-	color: #ffffff;
+	color: #416983;
 }
 
 .carousel h1:after, .carousel h1:before {
     content: " ";
-	color: #ffffff;
     display: none;
     width: 0;
     height: 2px;
