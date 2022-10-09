@@ -2,6 +2,12 @@
 
 # Read POI dataset
 poi_data <- read.csv('data/cleaned_poi.csv')
+colnames(poi_data) <- c('theme', 'sub_theme', 'feature_name', 'coordinates', 'lat', 'long')
+wifi_data <- read.csv('data/Melbourne_wifi.csv')
+
+wifiIcon <- makeAwesomeIcon(
+  text = fa("wifi")
+)
 
 # Theme for dashboard
 customTheme <- shinyDashboardThemeDIY(
