@@ -28,21 +28,23 @@ shinyServer(function(input, output) {
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE)) %>%
       addMarkers(data = landmark_data, ~long, ~lat, icon = landmarkIcon,
-                 label = ~feature_name, group = "<img src='landmark.png' height='16' width='16'> Landmark") %>%
+                 label = landmarkLabels, group = "<img src='landmark.png' height='16' width='16'> Landmark") %>%
       addMarkers(data = gallery_data, ~long, ~lat, icon = museumIcon,
-                 label = ~feature_name, group = "<img src='museum.png' height='16' width='16'> Gallery/Museum/Library") %>%
+                 label = galleryLabels, group = "<img src='museum.png' height='16' width='16'> Gallery/Museum/Library") %>%
       addMarkers(data = church_data, ~long, ~lat, icon = churchIcon,
-                 label = ~feature_name, group = "<img src='church.png' height='16' width='16'> Place of Worship") %>%
+                 label = churchLabels, group = "<img src='church.png' height='16' width='16'> Place of Worship") %>%
       addMarkers(data = retail_data, ~long, ~lat, icon = retailIcon,
-                 label = ~feature_name, group = "<img src='retail.png' height='16' width='16'> Retail") %>%
+                 label = retailLabels, group = "<img src='retail.png' height='16' width='16'> Retail") %>%
       addMarkers(data = leisure_data, ~long, ~lat, icon = leisureIcon,
-                 label = ~feature_name, group = "<img src='leisure.png' height='16' width='16'> Leisure and Recreation") %>%
+                 label = leisureLabels, group = "<img src='leisure.png' height='16' width='16'> Leisure and Recreation") %>%
       addMarkers(data = visitorcenter_data, ~long, ~lat, icon = visitorcentreIcon,
-                 label = ~feature_name, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth") %>%
+                 label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth") %>%
       addMarkers(data = wifi_data, ~Longitude, ~Latitude, 
                  icon = wifiIcon, group = "<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       addMarkers(data = city_circle, ~long, ~lat, icon = tramIcon,
                  label = ~NAME, group = "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
+      addPolylines(data = tram_track, group = "<img src='track.png' height='16' width='16'> Tram Route",
+                   opacity = 0.5) %>%
       addLayersControl(
         overlayGroups = c("<img src='landmark.png' height='16' width='16'> Landmark",
                           "<img src='museum.png' height='16' width='16'> Gallery/Museum/Library",
@@ -51,10 +53,12 @@ shinyServer(function(input, output) {
                           "<img src='leisure.png' height='16' width='16'> Leisure and Recreation",
                           "<img src='information.png' height='16' width='16'> Visitor Information Booth",
                           "<img src='wifi.png' height='16' width='16'> Public Wifi Location",
-                          "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram"),
+                          "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram",
+                          "<img src='track.png' height='16' width='16'> Tram Route"),
         options = layersControlOptions(collapsed = FALSE)
       ) %>%
       hideGroup("<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
-      hideGroup("<img src='tram.png' height='16' width='16'> City Circle Tourist Tram")
+      hideGroup("<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
+      hideGroup("<img src='track.png' height='16' width='16'> Tram Route")
   })
 })

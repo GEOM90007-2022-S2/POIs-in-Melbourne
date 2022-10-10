@@ -1,3 +1,3 @@
-theme,sub_theme,feature_name,coordinates,lat,long
-Visitor Centre,Visitor Centre,Melbourne Visitor Booth,"-37.8139525061193, 144.964425882562",-37.8139525061193,144.964425882562
-Visitor Centre,Visitor Centre,Melbourne Visitor Centre,"-37.8177352402006, 144.967937138226",-37.8177352402006,144.967937138226
+theme,sub_theme,feature_name,coordinates,url,lat,long
+Visitor Centre,Visitor Centre,Melbourne Visitor Booth,"-37.8139525061193, 144.964425882562",https://www.visitmelbourne.com/-/media/atdw/melbourne/travel-information/visitor-information-centres/a04fd9e4f419fb2bc592783de05a874c_1600x1200.jpeg?ts=20210423361201,-37.8139525061193,144.964425882562
+Visitor Centre,Visitor Centre,Melbourne Visitor Centre,"-37.8177352402006, 144.967937138226",https://thumbs.dreamstime.com/b/melbourne-visitor-centre-australia-provides-information-tourists-local-people-modern-building-situated-65402834.jpg,-37.8177352402006,144.967937138226

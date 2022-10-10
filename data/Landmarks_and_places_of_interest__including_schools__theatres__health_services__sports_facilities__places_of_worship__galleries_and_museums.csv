@@ -1,157 +1,145 @@
-Theme,Sub Theme,Feature Name,Co-ordinates
-Art Gallery/Museum/Library,Library,The Melbourne Athenaeum Library,"(-37.8148855756416, 144.967291289941)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Carlton Gardens South,"(-37.8060684577258, 144.971266479841)"
-Place of Worship,Church,St Francis Church,"(-37.8118847831837, 144.962422614541)"
-Place of Worship,Church,Wesley Church,"(-37.8101576446961, 144.968168215633)"
-Place of Worship,Church,St Augustines Church,"(-37.8169741358546, 144.954862000132)"
-Place of Worship,Church,St James Church,"(-37.8101281201969, 144.952468571683)"
-Place of Worship,Church,St Mary's Anglican Church,"(-37.8031663672997, 144.953761537074)"
-Place of Worship,Church,Romanian Orthodox,"(-37.8052307297468, 144.966986444597)"
-Place of Worship,Church,Welsh Presbyterian Church,"(-37.8104478768313, 144.959873260087)"
-Place of Worship,Church,Church of Christ,"(-37.8104524079085, 144.96388920294)"
-Place of Worship,Church,Scots Church,"(-37.8145687802664, 144.96855105335)"
-Place of Worship,Church,St Michael's Uniting Church,"(-37.8143851324913, 144.969174036096)"
-Place of Worship,Church,Greek Orthodox Church,"(-37.8088064667555, 144.978259089269)"
-Place of Worship,Church,St Peter's Eastern Hill,"(-37.8097086714637, 144.975259178609)"
-Place of Worship,Church,Lutheran Trinity Church,"(-37.8109757054396, 144.975729473552)"
-Place of Worship,Church,Holy Trinity,"(-37.8140667110854, 144.983197322289)"
-Place of Worship,Church,St Johns Lutheran Church,"(-37.8209399677168, 144.967121099857)"
-Place of Worship,Church,North Melbourne Uniting,"(-37.8035538471344, 144.947671538375)"
-Place of Worship,Church,Melbourne Unitarian Church,"(-37.8114487773394, 144.984664890999)"
-Place of Worship,Church,All Nations Uniting Church,"(-37.7959155303946, 144.968981110942)"
-Place of Worship,Church,Our Lady of Lebanon Church,"(-37.8025766539683, 144.969334720932)"
-Place of Worship,Church,St Michaels,"(-37.7940512679297, 144.945399480629)"
-Place of Worship,Church,Ukranian Catholic Cathedral,"(-37.7963084580345, 144.944313454028)"
-Place of Worship,Church,St Alban Anglican Church,"(-37.7942169477929, 144.94161451392)"
-Place of Worship,Church,Christ Church Kensington,"(-37.7932109480553, 144.92729572288)"
-Place of Worship,Church,Holy Rosary,"(-37.7948087414394, 144.928362125005)"
-Place of Worship,Church,Collins Street Baptist Church,"(-37.8147011904647, 144.968072486031)"
-Place of Worship,Church,St Thomas Aquinas Church,"(-37.8353076902578, 144.976809080472)"
-Place of Worship,Church,South Yarra Presbyterian Church,"(-37.8407473645397, 144.98562699348)"
-Place of Worship,Church,The Parish of Christ Church South Yarra,"(-37.8386270533576, 144.986009385387)"
-Place of Worship,Synagogue,East Melbourne Synagogue,"(-37.809113728917, 144.97422190954)"
-Visitor Centre,Visitor Centre,Melbourne Visitor Booth,"(-37.8139525061193, 144.964425882562)"
-Leisure/Recreation,Major Sports & Recreation Facility,State Netball Hockey Centre,"(-37.7857860016289, 144.947580972027)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),University Square,"(-37.800410711209, 144.960398319302)"
-Leisure/Recreation,Private Sports Club/Facility,Royal Park Golf Course,"(-37.7819171308558, 144.956309119368)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Powlett Reserve,"(-37.8116929882498, 144.987275671763)"
-Leisure/Recreation,Major Sports & Recreation Facility,Visy Park,"(-37.7834303940347, 144.961982577553)"
-Retail,Retail,Queen Victoria Market,"(-37.8075002018073, 144.957158515056)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Carlton Gardens North,"(-37.8017690847403, 144.971997551189)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Old Melbourne Gaol Crime & Justice Experience,"(-37.8077644149636, 144.965463853978)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Kings Domain,"(-37.8255239795833, 144.974107925144)"
-Landmark,Theatre Live,State Theatre,"(-37.8212806349773, 144.968469643744)"
-Leisure/Recreation,Major Sports & Recreation Facility,Flemington Racecourse,"(-37.7908082646624, 144.912142987372)"
-Landmark,Railway Station,Southern Cross Railway Station,"(-37.8181633057171, 144.952944748845)"
-Landmark,Theatre Live,Princess Theatre,"(-37.8107257091302, 144.9723265962)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Treasury Gardens,"(-37.8143993575938, 144.975952335785)"
-Landmark,Public Buildings,State Library Victoria,"(-37.8099852201226, 144.964330322397)"
-Leisure/Recreation,Theatre Live,Regent Theatre,"(-37.8160014744179, 144.967916735261)"
-Landmark,Retail/Office,Treasury Reserve,"(-37.8129178793082, 144.975236759799)"
-Landmark,Office,Old Treasury Building,"(-37.8132371662585, 144.974423610255)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Batman Park,"(-37.8218460949601, 144.956665812218)"
-Landmark,Major Sports & Recreation Facility,Melbourne Cricket Ground (MCG),"(-37.8194921618419, 144.983402879078)"
-Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Melbourne Zoo,"(-37.7844449253712, 144.951371205938)"
-Landmark,Function/Conference/Exhibition Centre,Melbourne Exhibition Centre,"(-37.8252455123297, 144.95435243249)"
-Landmark,Function/Conference/Exhibition Centre,Melbourne Convention Centre,"(-37.8249040484653, 144.952288281644)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Polly Woodside,"(-37.8242574266145, 144.953478052064)"
-Leisure/Recreation,Private Sports Club/Facility,Melbourne International Shooting Club,"(-37.8292844929826, 144.913415802464)"
-Retail,Retail/Office/Carpark,Southgate Arts and Leisure Precinct,"(-37.8202245786597, 144.965989052839)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Australian Centre for Contemporary Art,"(-37.8266045432686, 144.967252924593)"
-Leisure/Recreation,Theatre Live,Malthouse Theatre,"(-37.8271768001126, 144.966936821789)"
-Place of Worship,Church,St Patricks Cathedral,"(-37.8101140950474, 144.975901529712)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Victorian Arts Centre,"(-37.8219947335768, 144.968837288153)"
-Landmark,Office,Parliament House,"(-37.811246655376, 144.97372641185)"
-Landmark,Public Buildings,Melbourne Town Hall,"(-37.8150754791411, 144.966542722283)"
-Landmark,Office,Former Royal Mint,"(-37.8121838748712, 144.957055454136)"
-Retail,Retail/Office,DFO South Wharf,"(-37.824887401234, 144.949794297819)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Queen Victoria Gardens,"(-37.8216381244891, 144.971049530478)"
-Leisure/Recreation,Public Buildings,Sidney Myer Music Bowl,"(-37.8233471608733, 144.974686151365)"
-Leisure/Recreation,Casino,Crown Entertainment Complex,"(-37.8235761092516, 144.957312880653)"
-Art Gallery/Museum/Library,Art Gallery/Museum,The Ian Potter Centre: NGV Australia,"(-37.8174831423197, 144.969899048343)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Federation Square,"(-37.8178516571684, 144.968963600783)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Thoroughbred Racing Gallery,"(-37.8188662730911, 144.9839700954)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),New Quay,"(-37.8152178789077, 144.941617889032)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Docklands Park,"(-37.8209956785618, 144.946781702342)"
-Retail,Retail/Office,Waterfront City,"(-37.815056661803, 144.939136876334)"
-Retail,Current Construction Site,Harbour Town,"(-37.8139256326845, 144.938123825625)"
-Leisure/Recreation,Major Sports & Recreation Facility,AAMI Park,"(-37.8247252673963, 144.98380297866)"
-Leisure/Recreation,Marina,New Quay Marina,"(-37.8152925454954, 144.942283726231)"
-Leisure/Recreation,Function/Conference/Exhibition Centre,Central Pier,"(-37.8165177307702, 144.943475014215)"
-Leisure/Recreation,Observation Tower/Wheel,Melbourne Star Observation Wheel,"(-37.8116163666726, 144.937588920436)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Point Park,"(-37.8233522700646, 144.942102276731)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Newmarket Reserve,"(-37.7878473341234, 144.922972125346)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Fox Classic Car Collection,"(-37.8213744301481, 144.948496661709)"
-Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Wonderland Park,"(-37.8116945351989, 144.936833674975)"
-Leisure/Recreation,Major Sports & Recreation Facility,Rod Laver Arena,"(-37.8220456119807, 144.978487173787)"
-Leisure/Recreation,Major Sports & Recreation Facility,Melbourne Park,"(-37.8209085970021, 144.978735802793)"
-Leisure/Recreation,Major Sports & Recreation Facility,Margaret Court Arena,"(-37.8213252086842, 144.977591098955)"
-Leisure/Recreation,Major Sports & Recreation Facility,Hisense Arena,"(-37.823110002667, 144.981834802535)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Melbourne Museum,"(-37.8035518129299, 144.971690718887)"
-Leisure/Recreation,Cinema,IMAX Melbourne,"(-37.8034315561903, 144.970639929886)"
-Leisure/Recreation,Theatre Live,MTC Theatre,"(-37.8242661832902, 144.968174400274)"
-Leisure/Recreation,Public Buildings,Elisabeth Murdoch Hall,"(-37.8239733704282, 144.967450979234)"
-Art Gallery/Museum/Library,Public Buildings,NGV International,"(-37.8230135000869, 144.969342535451)"
-Leisure/Recreation,Theatre Live,Hamer Hall,"(-37.8199901009015, 144.967992144257)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Birrarung Marr,"(-37.81806108403, 144.97314667014)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Riverslide Skate Park,"(-37.8207887122448, 144.972951789291)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Alexandra Gardens,"(-37.8206051404251, 144.971796067365)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),North Melbourne Recreation Reserve,"(-37.7988345257153, 144.941452061463)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),J.J Holland Park,"(-37.7982358832177, 144.923837074813)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Royal Park,"(-37.7906174256581, 144.953834240647)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Princes Park,"(-37.7870161727156, 144.961115214367)"
-Art Gallery/Museum/Library,Art Gallery/Museum,National Sports Museum,"(-37.8189544909462, 144.984669809381)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Shrine of Rembrance Reserve,"(-37.8320733992876, 144.973628364465)"
-Landmark,Public Buildings,Shrine of Remembrance,"(-37.8302080020387, 144.973441913623)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Royal Botanic Gardens,"(-37.8306631583233, 144.980850432751)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Yarra Park,"(-37.820469374101, 144.986671109615)"
-Leisure/Recreation,Indoor Recreation Facility,Icehouse,"(-37.8121881194053, 144.935684018873)"
-Leisure/Recreation,Theatre Live,Athanaeum Theatre,"(-37.814954347831, 144.96732254212)"
-Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Riverside Park,"(-37.7948375315825, 144.915607065132)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Darling Square,"(-37.81299206932, 144.989062559512)"
-Leisure/Recreation,Theatre Live,Carlton Courthouse Theatre,"(-37.7976589943217, 144.968750113566)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Flagstaff Gardens,"(-37.8111222889277, 144.954696055235)"
-Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Melbourne Showgrounds,"(-37.7823097850883, 144.910822117306)"
-Leisure/Recreation,Theatre Live,Her Majesty's Theatre,"(-37.8109975612842, 144.969520183129)"
-Leisure/Recreation,Theatre Live,Comedy Theatre,"(-37.8102053945163, 144.97013311862)"
-Leisure/Recreation,Theatre Live,La Mama Theatre,"(-37.7991304956733, 144.967669503083)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Fawkner Park,"(-37.8413996708186, 144.981625667877)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Fitzroy Gardens,"(-37.8129616331579, 144.980455714669)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Sinclair's Cottage,"(-37.8145407488014, 144.980554992725)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Enterprize Park,"(-37.820210269629, 144.959276859602)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Victoria Police Museum,"(-37.8222182774409, 144.954039975197)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Immigration Museum,"(-37.8191798798062, 144.960426777129)"
-Place of Worship,Church,St Pauls Cathedral,"(-37.8169549012399, 144.967681647402)"
-Leisure/Recreation,Theatre Live,Forum Theatre,"(-37.816485409696, 144.969386556998)"
-Landmark,Railway Station,Flinders Street Railway Station,"(-37.8179063007545, 144.967064817875)"
-Retail,Store Yard,Melbourne Wholesale Fish Market,"(-37.8083471006041, 144.930613255612)"
-Retail,Retail/Office/Carpark,"Melbourne Wholesale Fruit, Vegetable & Flower Market","(-37.80687252157, 144.923287444259)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Fire Services Museum Victoria,"(-37.8085761281612, 144.975373745366)"
-Art Gallery/Museum/Library,Art Gallery/Museum,The Ian Potter Museum Of Art,"(-37.7973939595503, 144.964156669702)"
-Landmark,Tertiary (University),University of Melbourne,"(-37.7982892284927, 144.96099520158)"
-Retail,Retail/Office/Carpark,Melbourne Central,"(-37.8105371797142, 144.962749729496)"
-Retail,Retail/Office/Residential/Carpark,QV Village,"(-37.8106891897454, 144.965714574014)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Argyle Square,"(-37.8031480577285, 144.965761295089)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Piazza Italia,"(-37.8025164192523, 144.965863092947)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Macarthur Square,"(-37.7983318676737, 144.971514146104)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Murchinson Square,"(-37.8002735025371, 144.973059252203)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Parliament Reserve,"(-37.809852620638, 144.973462202839)"
-Leisure/Recreation,Indoor Recreation Facility,Carlton Baths,"(-37.7934377042609, 144.971696548624)"
-Leisure/Recreation,Major Sports & Recreation Facility,City Baths,"(-37.8071585350561, 144.963189789721)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Westgate Park,"(-37.8314918578874, 144.908824792698)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Cooks' Cottage,"(-37.8144604899837, 144.979471339826)"
-Leisure/Recreation,Aquarium,Melbourne Aquarium,"(-37.8209627824685, 144.958425696055)"
-Leisure/Recreation,Major Sports & Recreation Facility,Westpac Centre,"(-37.8242456858593, 144.979720306309)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Royal Exhibition Building,"(-37.80460262432, 144.971521914952)"
-Leisure/Recreation,Major Sports & Recreation Facility,Etihad Stadium,"(-37.8161760471742, 144.947496254547)"
-Leisure/Recreation,Observation Tower/Wheel,Eureka Skydeck 88,"(-37.8216187583314, 144.964622218598)"
-Landmark,Informal Outdoor Facility (Park/Garden/Reserve),Sandridge Rail Bridge,"(-37.8201763042794, 144.96298113724)"
-Visitor Centre,Visitor Centre,Melbourne Visitor Centre,"(-37.8177352402006, 144.967937138226)"
-Art Gallery/Museum/Library,Art Gallery/Museum,Australian Centre For The Moving Image (ACMI),"(-37.8176107327202, 144.969070431323)"
-Landmark,Bridge,Webb Bridge,"(-37.8232052384507, 144.947291011905)"
-Retail,Department Store,Myer,"(-37.8135911985281, 144.963855087868)"
-Retail,Department Store,David Jones,"(-37.8133127260638, 144.964373486798)"
-Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Lincoln Square,"(-37.8027919689732, 144.962760852233)"
-Landmark,Dwelling (House),Bishopscourt,"(-37.8132921649416, 144.98350690799)"
-Art Gallery/Museum/Library,Art Gallery/Museum,The Museum Of Australian Chinese History,"(-37.8107686127655, 144.96923385414)"
-Landmark,Retail/Office/Carpark,ANZ 'Gothic' Bank,"(-37.8161580666029, 144.961673719242)"
+Theme,Sub Theme,Feature Name,Co-ordinates,url
+Art Gallery/Museum/Library,Library,The Melbourne Athenaeum Library,"(-37.8148855756416, 144.967291289941)",https://victoriancollections.net.au/media/collectors/52031b9d2162ef1da056d150/items/520f04aa2162ef2580bffb92/item-media/522c55b62162ef18e85a4b19/VictorianCollections-large.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Carlton Gardens South,"(-37.8060684577258, 144.971266479841)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxrWTJObU5UazRaUzFqT0dFMExUUTJNR1l0WWpFMVppMDVPR0k0Wmpaak5qRXhaRFlHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--8885bb9b33b8aae8b9c0b1e227a74994bcf85253/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/carlton-gardens-203.jpg
+Place of Worship,Church,St Francis Church,"(-37.8118847831837, 144.962422614541)",https://www.adonline.id.au/buildings/images/st-francis-church-2.jpg
+Place of Worship,Church,Wesley Church,"(-37.8101576446961, 144.968168215633)",https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.coxarchitecture.com.au%2Fproject%2Fwesley-place%2F&psig=AOvVaw2rbcq2Q71QARFZ7BiHGVDd&ust=1665463061555000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOCClsPr1PoCFQAAAAAdAAAAABAO
+Place of Worship,Church,St Augustines Church,"(-37.8169741358546, 144.954862000132)",https://live.staticflickr.com/4039/4589652821_961ac49e9f_b.jpg
+Place of Worship,Church,St James Church,"(-37.8101281201969, 144.952468571683)",https://anzab.org.au/towerImages/JAM.jpg
+Place of Worship,Church,St Mary's Anglican Church,"(-37.8031663672997, 144.953761537074)",https://www.churchhistories.net.au/application/files/cache/thumbnails/8deb70113aa08077675f9c237d48b764.jpg
+Place of Worship,Church,Romanian Orthodox,"(-37.8052307297468, 144.966986444597)",https://austbuildsupplies.com.au/s__cdn/assets/uploads/7a5b97919bd183782bc64008d8b033ac_-victoria-boroondara-city-canterbury-saint-filoteea-romanian-orthodox-church-melbourne-0448-191-189html.jpg
+Place of Worship,Church,Welsh Presbyterian Church,"(-37.8104478768313, 144.959873260087)",https://upload.wikimedia.org/wikipedia/commons/2/26/Welsh_Church_Melbourne_2010-11-22.jpg
+Place of Worship,Church,Church of Christ,"(-37.8104524079085, 144.96388920294)",https://www.churchhistories.net.au/application/files/cache/thumbnails/37fc97527e275e5e4b6210489bba68e4.jpg
+Place of Worship,Church,Scots Church,"(-37.8145687802664, 144.96855105335)",https://openhousemelbourne.org/wp-content/uploads/2021/07/42126719.jpeg
+Place of Worship,Church,St Michael's Uniting Church,"(-37.8143851324913, 144.969174036096)",https://www.churchhistories.net.au/application/files/cache/thumbnails/4c3455b4925fee4183cdd367e5bd2612.jpg
+Place of Worship,Church,St Peter's Eastern Hill,"(-37.8097086714637, 144.975259178609)",https://www.ohta.org.au/images/PA290034.jpg
+Place of Worship,Church,Lutheran Trinity Church,"(-37.8109757054396, 144.975729473552)",https://en.kirche.org.au/wp-content/uploads/2017/02/slide01.jpg
+Place of Worship,Church,St Johns Lutheran Church,"(-37.8209399677168, 144.967121099857)",https://yarrariver.melbourne/thumb/600x400/crop/https://s3-ap-southeast-2.amazonaws.com/papercms/yrba/post/St-Johns-1-300x235-1.jpg
+Place of Worship,Church,St Michaels,"(-37.7940512679297, 144.945399480629)",https://stmichaels.org.au/wp-content/uploads/2018/01/St-Michaels-Church-Organ-Coloured-Lights-Photo-by-Jackson-Raine-2015-1.jpg
+Place of Worship,Church,Ukranian Catholic Cathedral,"(-37.7963084580345, 144.944313454028)",https://catholicukes.org.au/wp-content/uploads/2011/09/katedra11.jpg
+Place of Worship,Church,Holy Rosary,"(-37.7948087414394, 144.928362125005)",https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Stmaryswestmelbourne.jpg/1200px-Stmaryswestmelbourne.jpg
+Place of Worship,Church,Collins Street Baptist Church,"(-37.8147011904647, 144.968072486031)",https://www.csbc.org.au/wp-content/uploads/2018/06/cropped-26198174729_21a4d66498_o.jpg
+Place of Worship,Church,St Thomas Aquinas Church,"(-37.8353076902578, 144.976809080472)",https://i.pinimg.com/originals/99/5b/06/995b06d4e3c3453f3f3dea7491fb5214.jpg
+Place of Worship,Church,South Yarra Presbyterian Church,"(-37.8407473645397, 144.98562699348)",https://fergusonandurie.files.wordpress.com/2016/03/south-yarra-presb-99a.jpg
+Place of Worship,Church,The Parish of Christ Church South Yarra,"(-37.8386270533576, 144.986009385387)",https://tomelbourne.com.au/wp-content/uploads/Christ-Church-South-Yarra-5.jpg
+Place of Worship,Synagogue,East Melbourne Synagogue,"(-37.809113728917, 144.97422190954)",https://upload.wikimedia.org/wikipedia/commons/a/af/East_Mealbourne_Synagogue.JPG
+Visitor Centre,Visitor Centre,Melbourne Visitor Booth,"(-37.8139525061193, 144.964425882562)",https://www.visitmelbourne.com/-/media/atdw/melbourne/travel-information/visitor-information-centres/a04fd9e4f419fb2bc592783de05a874c_1600x1200.jpeg?ts=20210423361201
+Leisure/Recreation,Major Sports & Recreation Facility,State Netball Hockey Centre,"(-37.7857860016289, 144.947580972027)",https://www.austadiums.com/stadiums/photos/SNHC.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),University Square,"(-37.800410711209, 144.960398319302)",https://vicscreen.vic.gov.au/images/locations/City%20of%20Melbourne/The_University_of_Melbourne/university_square/cmus-MelbourneUniversity-UniversitySquare_026.jpg
+Leisure/Recreation,Private Sports Club/Facility,Royal Park Golf Course,"(-37.7819171308558, 144.956309119368)",https://golf-pass.brightspotcdn.com/a8/2c/d8f3808fc9b09a20ed4cd9dcf8bc/107354.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Powlett Reserve,"(-37.8116929882498, 144.987275671763)",https://www.wyshamandco.com.au/wp-content/uploads/sites/206/2020/12/27A.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,Visy Park,"(-37.7834303940347, 144.961982577553)",https://www.austadiums.com/news/images/ikon-park-aerial-preview.jpg
+Retail,Retail,Queen Victoria Market,"(-37.8075002018073, 144.957158515056)",https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/72/6e/20/discover-the-variety.jpg?w=1200&h=-1&s=1
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Carlton Gardens North,"(-37.8017690847403, 144.971997551189)",https://www.melbourne.vic.gov.au/SiteCollectionImages/carlton-gardens-1200-03.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Old Melbourne Gaol Crime & Justice Experience,"(-37.8077644149636, 144.965463853978)",https://image.iventurecard.com/images/attractions/attraction_109_main_5a94945f68188.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Kings Domain,"(-37.8255239795833, 144.974107925144)",http://www.melbourne.vic.gov.au/SiteCollectionImages/kings-domain-400.jpg
+Landmark,Theatre Live,State Theatre,"(-37.8212806349773, 144.968469643744)",https://media.timeout.com/images/105598247/image.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,Flemington Racecourse,"(-37.7908082646624, 144.912142987372)",https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/87/c4.jpg
+Landmark,Railway Station,Southern Cross Railway Station,"(-37.8181633057171, 144.952944748845)",https://www.railway-technology.com/wp-content/uploads/sites/13/2017/10/1-image-11.jpg
+Landmark,Theatre Live,Princess Theatre,"(-37.8107257091302, 144.9723265962)",https://www.traveller.com.au/content/dam/images/h/1/c/t/y/h/image.related.articleLeadwide.520x294.h1cjsh.png/1556691774137.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Treasury Gardens,"(-37.8143993575938, 144.975952335785)",https://www.encirclephotos.com/wp-content/uploads/Australia-Melbourne-Treasury-Gardens-1440x971.jpg
+Landmark,Public Buildings,State Library Victoria,"(-37.8099852201226, 144.964330322397)",http://www.slv.vic.gov.au/sites/default/files/styles/feature_image/public/slv_facade.jpg
+Leisure/Recreation,Theatre Live,Regent Theatre,"(-37.8160014744179, 144.967916735261)",https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/df/0d/e7.jpg
+Landmark,Office,Old Treasury Building,"(-37.8132371662585, 144.974423610255)",https://upload.wikimedia.org/wikipedia/commons/0/0e/OTBfrontCOLOUR2.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Batman Park,"(-37.8218460949601, 144.956665812218)",https://www.melbournepoint.com.au/wp-content/uploads/2016/10/Batman-Park-03.jpg
+Landmark,Major Sports & Recreation Facility,Melbourne Cricket Ground (MCG),"(-37.8194921618419, 144.983402879078)",https://www.austadiums.com/news/images/MCG-1.jpg
+Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Melbourne Zoo,"(-37.7844449253712, 144.951371205938)",https://cdn.getyourguide.com/img/tour/5bd846d88fd67.jpeg/146.jpg
+Landmark,Function/Conference/Exhibition Centre,Melbourne Exhibition Centre,"(-37.8252455123297, 144.95435243249)",https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/77/77/a2/clarendon-street-entrance.jpg?w=1200&h=-1&s=1
+Art Gallery/Museum/Library,Art Gallery/Museum,Polly Woodside,"(-37.8242574266145, 144.953478052064)",https://www.onlymelbourne.com.au/image/ico-pollyowoodside-ship.jpg
+Leisure/Recreation,Private Sports Club/Facility,Melbourne International Shooting Club,"(-37.8292844929826, 144.913415802464)",https://www.misc.org.au/wp-content/uploads/2021/09/DJI_0660-800x533-1.jpeg
+Retail,Retail/Office/Carpark,Southgate Arts and Leisure Precinct,"(-37.8202245786597, 144.965989052839)",https://www.southgatemelbourne.com.au/wp-content/uploads/southgate.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Australian Centre for Contemporary Art,"(-37.8266045432686, 144.967252924593)",https://images.adsttc.com/media/images/5016/2ced/28ba/0d15/9800/0f80/newsletter/stringio.jpg?1414480623
+Leisure/Recreation,Theatre Live,Malthouse Theatre,"(-37.8271768001126, 144.966936821789)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxsWlRGbVpUWTNNaTA0TURnMUxUUXdZV1l0WVRJMU9DMWpaVEZsTkRJMk9EZG1NV0lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--a7df02258f8424fc45a9e58110891212199ed431/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/Malthouse-Theatre-1.jpg
+Place of Worship,Church,St Patricks Cathedral,"(-37.8101140950474, 144.975901529712)",https://melbournecitytour.com.au/wp-content/uploads/2019/07/st-patricks-cathedral-view.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Victorian Arts Centre,"(-37.8219947335768, 144.968837288153)",https://www.visitvictoria.com/-/media/atdw/melbourne/see-and-do/art-and-culture/performing-arts/cf0d49bf61e0a578812b674d4605de0e_1600x1200.jpeg?ts=20220706310924
+Landmark,Office,Parliament House,"(-37.811246655376, 144.97372641185)",https://i.pinimg.com/originals/d4/66/17/d46617a8f5b5783d09b4d2d39a2817b5.jpg
+Landmark,Public Buildings,Melbourne Town Hall,"(-37.8150754791411, 144.966542722283)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxrWm1FMlltTTFNQzFpTWpZMUxUUm1NV1F0WVdVMU5DMDBPVGN5TkRJNVltWXhZVFlHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--900cfacbb928d97fcea5c77f2f35cf87c49f6b4c/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMb0Eya0NXQUk9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--5c7b32c6a74ee88f2f4469ce3a4ae709d1994efe/Melbourne%20Town%20Hall%201.jpg
+Landmark,Office,Former Royal Mint,"(-37.8121838748712, 144.957055454136)",https://www.adonline.id.au/buildings/images/royal-mint.jpg
+Retail,Retail/Office,DFO South Wharf,"(-37.824887401234, 144.949794297819)",https://static.ffx.io/images/$zoom_1%2C$multiply_1.1852%2C$ratio_1.777778%2C$width_675%2C$x_171%2C$y_135/t_crop_custom/q_86%2Cf_auto/3fb812a5be6d19705d4ef91577678279bb191f5a
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Queen Victoria Gardens,"(-37.8216381244891, 144.971049530478)",https://www.melbourne.vic.gov.au/SiteCollectionImages/queen-victoria-gardens-1200-07.jpg
+Leisure/Recreation,Public Buildings,Sidney Myer Music Bowl,"(-37.8233471608733, 144.974686151365)",https://upload.wikimedia.org/wikipedia/commons/0/0e/Sidney_Myer_Music_Bowl.jpg
+Leisure/Recreation,Casino,Crown Entertainment Complex,"(-37.8235761092516, 144.957312880653)",https://pix10.agoda.net/hotelImages/330/3302/3302_14041713590019109765.jpg?ca=2&ce=1&s=1024x768
+Art Gallery/Museum/Library,Art Gallery/Museum,The Ian Potter Centre: NGV Australia,"(-37.8174831423197, 144.969899048343)",https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/54/ee.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Federation Square,"(-37.8178516571684, 144.968963600783)",https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/54/ee.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Thoroughbred Racing Gallery,"(-37.8188662730911, 144.9839700954)",https://www.buildaustralia.com.au/wp-content/uploads/2018/08/The-Club-Stand-July-2018-CREDIT-PAT-SCALA-FOR-RACING-PHOTOS-3.1-e1533518143149.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),New Quay,"(-37.8152178789077, 144.941617889032)",https://media.istockphoto.com/photos/docklands-cityscape-melbourne-picture-id529079467?k=20&m=529079467&s=612x612&w=0&h=LoWcIF_L3Z3tdvg52VD3cjocLHMrjYfvfrdGBZinF6k=
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Docklands Park,"(-37.8209956785618, 144.946781702342)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWs0WkRnME5XTTVOaTFsTXpNNExUUTVNMk10T1dOallpMWlOMkl6WkdabFpqTXpZVFFHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--31afeabc24a9bb12a27d12dd99f5e50e37b9a813/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/Docklands-Park-1.jpg
+Retail,Retail/Office,Waterfront City,"(-37.815056661803, 144.939136876334)",https://www.development.vic.gov.au/__data/assets/image/0007/65473/The-District-Docklands.jpg
+Retail,Current Construction Site,Harbour Town,"(-37.8139256326845, 144.938123825625)",https://ak.jogurucdn.com/media/image/p25/place-2015-12-28-8-Harbourtownshoppingcentre841e3e599cc21a1c454be7a4154c639d.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,AAMI Park,"(-37.8247252673963, 144.98380297866)",https://www.austadiums.com/stadiums/photos/AAMI-Park-melbourne.jpg
+Leisure/Recreation,Marina,New Quay Marina,"(-37.8152925454954, 144.942283726231)",https://cf.bstatic.com/xdata/images/hotel/max1024x768/35523707.jpg?k=01900f13ba5a05a9a6110b516b23c66e42d1bb06236fda9b9c673c0b606d950c&o=&hp=1
+Leisure/Recreation,Function/Conference/Exhibition Centre,Central Pier,"(-37.8165177307702, 144.943475014215)",https://static.ffx.io/images/$zoom_0.252%2C$multiply_0.9735%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_0/t_crop_custom/q_86%2Cf_auto/a61d432030daf176003945cdb8973ab7bb9c6a80
+Leisure/Recreation,Observation Tower/Wheel,Melbourne Star Observation Wheel,"(-37.8116163666726, 144.937588920436)",https://www.docklandsnews.com.au/themes/user/site/dn/asset/img/general/_og-image/180_Melbourne-Star.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Point Park,"(-37.8233522700646, 144.942102276731)",https://i2.au.reastatic.net/800x600/8eb5bc518ac9b44cfd7c260f88d7c33b59b2eebdc002a4b8629c782f3c3633e1/main.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Newmarket Reserve,"(-37.7878473341234, 144.922972125346)",https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/c4/1e/ff/a-picnic-set-and-some.jpg?w=1200&h=-1&s=1
+Art Gallery/Museum/Library,Art Gallery/Museum,Fox Classic Car Collection,"(-37.8213744301481, 144.948496661709)",https://media-cdn.tripadvisor.com/media/photo-s/06/81/9e/4c/fox-classic-car-collection.jpg
+Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Wonderland Park,"(-37.8116945351989, 144.936833674975)",https://www.weekendnotes.com/im/009/04/wfp171.JPG
+Leisure/Recreation,Major Sports & Recreation Facility,Rod Laver Arena,"(-37.8220456119807, 144.978487173787)",https://i.dailymail.co.uk/1s/2021/02/13/09/39240550-9256417-image-a-100_1613207409861.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,Melbourne Park,"(-37.8209085970021, 144.978735802793)",https://www.austadiums.com/stadiums/photos/melbourne-park-aerial-2022.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,Margaret Court Arena,"(-37.8213252086842, 144.977591098955)",https://margaretcourtarena.com.au/wp-content/uploads/sites/5/2022/02/MCA-EOI-768x431.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,Hisense Arena,"(-37.823110002667, 144.981834802535)",https://static.ffx.io/images/$zoom_0.31332694763729246%2C$multiply_0.7554%2C$ratio_1.776846%2C$width_1059%2C$x_265%2C$y_244/t_crop_custom/q_86%2Cf_auto/a7b68e2be304708f1915682b4e8e8afe614f344f
+Art Gallery/Museum/Library,Art Gallery/Museum,Melbourne Museum,"(-37.8035518129299, 144.971690718887)",https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Melbourne_Museum_%28217000837%29.jpeg/640px-Melbourne_Museum_%28217000837%29.jpeg
+Leisure/Recreation,Cinema,IMAX Melbourne,"(-37.8034315561903, 144.970639929886)",https://media.timeout.com/images/103025805/750/422/image.jpg
+Leisure/Recreation,Theatre Live,MTC Theatre,"(-37.8242661832902, 144.968174400274)","https://res.cloudinary.com/mtc-2018/image/upload/c_fill,f_auto,g_auto,h_270,q_auto,w_480/v1/placeholders/venue-1.jpg"
+Leisure/Recreation,Public Buildings,Elisabeth Murdoch Hall,"(-37.8239733704282, 144.967450979234)",https://9968c6ef49dc043599a5-e151928c3d69a5a4a2d07a8bf3efa90a.ssl.cf2.rackcdn.com/707113.jpg
+Art Gallery/Museum/Library,Public Buildings,NGV International,"(-37.8230135000869, 144.969342535451)",https://upco.com.au/wp-content/uploads/2022/03/UPco_Blog_image-2.jpg
+Leisure/Recreation,Theatre Live,Hamer Hall,"(-37.8199901009015, 144.967992144257)",http://www.accmelb.com.au/wp-content/uploads/2018/02/HH-External.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Birrarung Marr,"(-37.81806108403, 144.97314667014)",https://upload.wikimedia.org/wikipedia/commons/a/aa/Birrarung_Marr_pedestrian_bridge.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Riverslide Skate Park,"(-37.8207887122448, 144.972951789291)",https://tothotornot.com/wp-content/uploads/2017/07/Riverslide-Skate-Park-Alexandra-Gardens-14-9.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Alexandra Gardens,"(-37.8206051404251, 144.971796067365)",https://www.melbourne.vic.gov.au/SiteCollectionImages/alexandra-gardens-04-1200.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),North Melbourne Recreation Reserve,"(-37.7988345257153, 144.941452061463)",https://pupsy.com.au/wp-content/uploads/2020/08/North-Melbourne-Recreation-Reserve.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),J.J Holland Park,"(-37.7982358832177, 144.923837074813)",http://www.melbourne.vic.gov.au/SiteCollectionImages/jj-holland-park-oval-400.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Royal Park,"(-37.7906174256581, 144.953834240647)",https://playgroundfind.com/wp-content/uploads/2015/03/royal-park-melbourne.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Princes Park,"(-37.7870161727156, 144.961115214367)",https://www.austadiums.com/news/images/princes-park.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,National Sports Museum,"(-37.8189544909462, 144.984669809381)",https://images.myguide-cdn.com/melbourne/companies/national-sports-museum/large/national-sports-museum-34279.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Shrine of Rembrance Reserve,"(-37.8320733992876, 144.973628364465)",https://media.tacdn.com/media/attractions-splice-spp-674x446/07/70/0c/b1.jpg
+Landmark,Public Buildings,Shrine of Remembrance,"(-37.8302080020387, 144.973441913623)",https://media.tacdn.com/media/attractions-splice-spp-674x446/07/70/0c/b1.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Royal Botanic Gardens,"(-37.8306631583233, 144.980850432751)",https://live-production.wcms.abc-cdn.net.au/91bd0f1744fb050e77402f7ee912393d?impolicy=wcms_crop_resize&cropH=1688&cropW=3000&xPos=0&yPos=274&width=862&height=485
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Yarra Park,"(-37.820469374101, 144.986671109615)",https://dogcentral.com.au/wp-content/uploads/2021/02/yarra-park.jpeg
+Leisure/Recreation,Indoor Recreation Facility,Icehouse,"(-37.8121881194053, 144.935684018873)",https://www.angloitalian.com.au/wp-content/uploads/2019/10/OBrien-3-1160x774.jpg
+Leisure/Recreation,Theatre Live,Athanaeum Theatre,"(-37.814954347831, 144.96732254212)",https://victoriancollections.net.au/media/collectors/52031b9d2162ef1da056d150/items/520f04aa2162ef2580bffb92/item-media/522c55b62162ef18e85a4b19/VictorianCollections-large.jpg
+Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Riverside Park,"(-37.7948375315825, 144.915607065132)",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPdqWjsPPo65eq3DruvN0EmU_gMS1vsjNpkjfGNffcTYtoWRNzK3krCBdqiMtnJr5rvzA&usqp=CAU
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Darling Square,"(-37.81299206932, 144.989062559512)",https://www.wyshamandco.com.au/wp-content/uploads/sites/206/2020/11/8.jpg
+Leisure/Recreation,Theatre Live,Carlton Courthouse Theatre,"(-37.7976589943217, 144.968750113566)",https://www.workingheritage.com.au/images/carlton-courthouse/Carlton-1.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Flagstaff Gardens,"(-37.8111222889277, 144.954696055235)",https://www.melbourne.vic.gov.au/SiteCollectionImages/flagstaff-gardens-02-1200.jpg
+Leisure/Recreation,"Outdoor Recreation Facility (Zoo, Golf Course)",Melbourne Showgrounds,"(-37.7823097850883, 144.910822117306)",https://www.structurflex.com/wp-content/uploads/2016/06/Royal_Melbourne_Showgrounds_1.jpg
+Leisure/Recreation,Theatre Live,Her Majesty's Theatre,"(-37.8109975612842, 144.969520183129)",https://www.onlymelbourne.com.au/image/ico-hermaj.jpg
+Leisure/Recreation,Theatre Live,Comedy Theatre,"(-37.8102053945163, 144.97013311862)",https://thumbs.dreamstime.com/b/melbourne-australia-november-brown-brick-facade-windows-comedy-theatre-intersection-lonsdale-exhibition-streets-166129546.jpg
+Leisure/Recreation,Theatre Live,La Mama Theatre,"(-37.7991304956733, 144.967669503083)",https://cdn.broadsheet.com.au/cache/fd/b3/fdb36433330e92f22f9b3c74d820bfc6.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Fawkner Park,"(-37.8413996708186, 144.981625667877)",http://www.melbourne.vic.gov.au/SiteCollectionImages/fawkner-park-400.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Fitzroy Gardens,"(-37.8129616331579, 144.980455714669)",https://media.timeout.com/images/105380522/750/422/image.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Sinclair's Cottage,"(-37.8145407488014, 144.980554992725)",https://ozoutback.com.au/Australia/melbourne/slides/2008092522.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Enterprize Park,"(-37.820210269629, 144.959276859602)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxsT0RNeU16VTFPUzB6TjJVNExUUTRaamd0T1dFNFlTMDFOamxoWmpReE4yTmpaamtHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--98588b9c7b38b57db04dc2b1448c2c9489013178/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/Enterprize-Park.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Victoria Police Museum,"(-37.8222182774409, 144.954039975197)",https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Victoria_Police_Museum.jpg/1200px-Victoria_Police_Museum.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Immigration Museum,"(-37.8191798798062, 144.960426777129)",https://www.visitvictoria.com/-/media/atdw/melbourne/see-and-do/art-and-culture/museums/original__9290444_ag51_front_museum_high_res_7ukoz0j_1600x1200.jpg?ts=20211103310437
+Place of Worship,Church,St Pauls Cathedral,"(-37.8169549012399, 144.967681647402)",https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/83/ff.jpg
+Leisure/Recreation,Theatre Live,Forum Theatre,"(-37.816485409696, 144.969386556998)",https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Flinders_St_-_Forum_Theatre.jpg/800px-Flinders_St_-_Forum_Theatre.jpg
+Landmark,Railway Station,Flinders Street Railway Station,"(-37.8179063007545, 144.967064817875)",https://images.squarespace-cdn.com/content/v1/5cb6cf74c2ff61533cf1e96e/1590634871400-217OKS7KMDO4VYL0ZBDB/133656-56.jpg?format=1000w
+Retail,Store Yard,Melbourne Wholesale Fish Market,"(-37.8083471006041, 144.930613255612)",https://cdn.theculturetrip.com/images/56-3627634-eveleigh-farmers-market-charles-haynes-flickr.jpg
+Retail,Retail/Office/Carpark,"Melbourne Wholesale Fruit, Vegetable & Flower Market","(-37.80687252157, 144.923287444259)",https://www.stockandland.com.au/images/transform/v1/crop/frm/7f5GEYimwWveccZe67yRBS/ebed69fb-3cd9-400a-8aa6-fa050521f339.jpg/r0_0_992_661_w992_h661_fmax.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Fire Services Museum Victoria,"(-37.8085761281612, 144.975373745366)",https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/FS1_Old.jpg/800px-FS1_Old.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,The Ian Potter Museum Of Art,"(-37.7973939595503, 144.964156669702)",https://art-museum.unimelb.edu.au/wp-content/uploads/2019/04/The-Potter_2.jpg
+Landmark,Tertiary (University),University of Melbourne,"(-37.7982892284927, 144.96099520158)",https://live-production.wcms.abc-cdn.net.au/2e976f06e047c2bf469bf502079bce0f?impolicy=wcms_crop_resize&cropH=3333&cropW=5000&xPos=0&yPos=0&width=862&height=575
+Retail,Retail/Office/Carpark,Melbourne Central,"(-37.8105371797142, 144.962749729496)",https://www.melbournecentral.com.au/Upload/MelbourneCentral/Media/Hero-Image.jpg
+Retail,Retail/Office/Residential/Carpark,QV Village,"(-37.8106891897454, 144.965714574014)",https://media.timeout.com/images/103026654/image.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Argyle Square,"(-37.8031480577285, 144.965761295089)",https://thumbs.dreamstime.com/b/argyle-square-centre-italian-district-melbourne-generally-called-piazza-italia-place-meeting-trees-blossom-166754072.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Macarthur Square,"(-37.7983318676737, 144.971514146104)",https://media-cdn.tripadvisor.com/media/photo-s/12/54/15/dd/shady-square.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Murchinson Square,"(-37.8002735025371, 144.973059252203)",https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/24/63/7f/park-sign.jpg?w=200&h=-1&s=1
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Parliament Reserve,"(-37.809852620638, 144.973462202839)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt3TkRZMVpUSTRZUzFoT1dGa0xUUTBZMlV0T1RnME5pMDFNell5TnpZd05XVTNaVEVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--88d89060b81378e18fb4b1fd176040c476985d98/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/federal-oak-and-pavilion-parliament-house-melbourne-10001.jpg
+Leisure/Recreation,Indoor Recreation Facility,Carlton Baths,"(-37.7934377042609, 144.971696548624)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt3TVRJNU1tSTRaUzAyWTJJM0xUUXdaVEF0T1dWbU55MW1OVGRoWWpsa09Ua3lNek1HT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--ab025e7dc17b62fbc4c0022f0ea9a9914e26d812/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFLdUFta0N6QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--7f9630e3134fed9b847d81e33e693bfd37ddddf1/CarltonBaths_4.jpg
+Leisure/Recreation,Major Sports & Recreation Facility,City Baths,"(-37.8071585350561, 144.963189789721)",https://melbourneinfo.net.au/wp-content/uploads/2020/06/48334382112_bab3932a80_b_Melbourne-City-Baths.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Westgate Park,"(-37.8314918578874, 144.908824792698)",https://preview.redd.it/qbq5tswvmvh21.jpg?width=640&crop=smart&auto=webp&s=69f645f02465680d18d5dd7597b05430fa1269fa
+Art Gallery/Museum/Library,Art Gallery/Museum,Cooks' Cottage,"(-37.8144604899837, 144.979471339826)",https://coralwaight.files.wordpress.com/2016/07/cooks-cottage.jpg
+Leisure/Recreation,Aquarium,Melbourne Aquarium,"(-37.8209627824685, 144.958425696055)",https://holidayinnmelbourne.com.au/wp-content/uploads/2019/08/sealife-melbourne-aquarium.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Royal Exhibition Building,"(-37.80460262432, 144.971521914952)",https://www.historyhit.com/app/uploads/fly-images/5150560/Melbourne-Royal-Exhibition-Building-788x537.jpg?x76921
+Leisure/Recreation,Major Sports & Recreation Facility,Etihad Stadium,"(-37.8161760471742, 144.947496254547)",https://www.austadiums.com/stadiums/photos/marvel-stadium.jpg
+Leisure/Recreation,Observation Tower/Wheel,Eureka Skydeck 88,"(-37.8216187583314, 144.964622218598)",https://www.thehotelconversation.com.au/sites/default/files/styles/article-full/public/cc62ec45-9bea-4eb9-a8bf-3ce81f020e43.jpeg
+Landmark,Informal Outdoor Facility (Park/Garden/Reserve),Sandridge Rail Bridge,"(-37.8201763042794, 144.96298113724)",https://live.staticflickr.com/5708/21343879719_ab2c1c9c57_b.jpg
+Visitor Centre,Visitor Centre,Melbourne Visitor Centre,"(-37.8177352402006, 144.967937138226)",https://thumbs.dreamstime.com/b/melbourne-visitor-centre-australia-provides-information-tourists-local-people-modern-building-situated-65402834.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,Australian Centre For The Moving Image (ACMI),"(-37.8176107327202, 144.969070431323)",http://architypereview.com/wp-content/themes/architype-review/includes/image.php?w=1000&h=644&m=1&i=%2Fwp-content%2Fuploads%2F2012%2F12%2F222-1000x664-1000x644.jpg
+Landmark,Bridge,Webb Bridge,"(-37.8232052384507, 144.947291011905)",https://image.architonic.com/imgArc/project-1/4/5205059/DCM-Webb+Bridge-02.jpg
+Retail,Department Store,Myer,"(-37.8135911985281, 144.963855087868)",https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWsxTldZME1ERTBaaTB4WVdRMExUUm1NV010WVdNeE1DMWhNR05tWkdJNVpUTTVNVFVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--97163ab896267551c894a88a220c8fe9eafe7496/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMb0Eya0NXQUk9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--5c7b32c6a74ee88f2f4469ce3a4ae709d1994efe/RESIZED_Myer%20Melbourne%20Facade.jpg
+Retail,Department Store,David Jones,"(-37.8133127260638, 144.964373486798)",https://cdn.broadsheet.com.au/cache/d3/5e/d35e7a2833cc45261e07410a582b13dc.jpg
+Leisure/Recreation,Informal Outdoor Facility (Park/Garden/Reserve),Lincoln Square,"(-37.8027919689732, 144.962760852233)",http://www.melbourne.vic.gov.au/SiteCollectionImages/lincoln-square-2020-400.jpg
+Landmark,Dwelling (House),Bishopscourt,"(-37.8132921649416, 144.98350690799)",https://opengardensvictoria.org.au/uploads/images/Gallery/Bishopscourt-2020/Bishopscourt_House.jpg
+Art Gallery/Museum/Library,Art Gallery/Museum,The Museum Of Australian Chinese History,"(-37.8107686127655, 144.96923385414)",https://media-cdn.tripadvisor.com/media/photo-s/0b/c2/d0/83/museum-of-chinese-australian.jpg
+Landmark,Retail/Office/Carpark,ANZ 'Gothic' Bank,"(-37.8161580666029, 144.961673719242)",https://cdn.newsapi.com.au/image/v1/8d73e58ffad80872d55494364e632dc7?width=650

@@ -11,6 +11,8 @@ leisure_data <- read.csv('data/leisure_poi.csv')
 visitorcenter_data <- read.csv('data/visitor_poi.csv')
 retail_data <- read.csv('data/retail_poi.csv')
 
+tram_track <- readOGR('data/Tram tracks.geojson')
+
 landmarkIcon <- makeIcon(
   "www/landmark.png",
   iconWidth = 20,
@@ -58,6 +60,43 @@ visitorcentreIcon <- makeIcon(
   iconWidth = 20,
   iconHeight = 20
 )
+
+landmarkLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  landmark_data$feature_name, landmark_data$theme, landmark_data$url
+) %>% lapply(htmltools::HTML)
+
+galleryLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  gallery_data$feature_name, gallery_data$theme, gallery_data$url
+) %>% lapply(htmltools::HTML)
+
+churchLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  church_data$feature_name, church_data$theme, church_data$url
+) %>% lapply(htmltools::HTML)
+
+leisureLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  leisure_data$feature_name, leisure_data$theme, leisure_data$url
+) %>% lapply(htmltools::HTML)
+
+visitorcenterLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  visitorcenter_data$feature_name, visitorcenter_data$theme, visitorcenter_data$url
+) %>% lapply(htmltools::HTML)
+
+retailLabels <- sprintf(
+  "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
+  <br/><img src=%s height='176.5' width='300'>",
+  retail_data$feature_name, retail_data$theme, retail_data$url
+) %>% lapply(htmltools::HTML)
+
 
 # Theme for dashboard
 customTheme <- shinyDashboardThemeDIY(

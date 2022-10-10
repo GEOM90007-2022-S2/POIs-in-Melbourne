@@ -6,6 +6,7 @@
 library(shiny)
 library(shinythemes)
 library(leaflet)
+library(rgdal)
 library(mapboxapi)
 library(fontawesome)
 library(shinyWidgets)
@@ -74,7 +75,14 @@ body <- dashboardBody(
     ),
     tabItem("poi",
             fluidPage(
-              titlePanel(strong("Point of Interest in Melbourne")),
+              titlePanel(strong("Attractions & Things to Do in Melbourne")),
+              hr(),
+              h5("Melbourne frequently tops the list of the world's most livable cities.
+                 You'll never run out of things to do in Melbourne. Explore the city's 
+                 diverse galleries and shops; stroll through lush gardens; cruise along 
+                 the Yarra River; or hop aboard a heritage tram to discover Melbourne's magic.
+                 Browse the map to find your next destination!",
+                 style = "color: #808080;font-size:15px;"),
               hr(),
               leafletOutput("poi_viz", height = 850),
               hr(),
