@@ -18,8 +18,8 @@ source('helper.R')
 # Define UI for application that draws a histogram
 header <- dashboardHeader(
   # Define the header and insert image as title
-  title = tags$a(tags$img(src='https://bit.ly/3cSvLu7',
-                          height='40', width='160')),
+  title = tags$a(tags$img(src='https://bit.ly/3rFI94P',
+                          height='55', width='160')),
   titleWidth = 280
 )
 
@@ -33,7 +33,10 @@ sidebar <- dashboardSidebar(
              icon = fa_i('fas fa-house')),
     menuItem("Point of Interest",
              tabName = "poi",
-             icon = fa_i('fas fa-map-location-dot'))
+             icon = fa_i('fas fa-map-location-dot')),
+    menuItem("Melbourne Weather",
+             tabName = "weather",
+             icon = fa_i('fas fa-sun'))
   )
 )
 
@@ -79,6 +82,12 @@ body <- dashboardBody(
                  a('Leaflet',
                    href="https://rstudio.github.io/leaflet/")
               )
+            )
+    ),
+    tabItem("weather",
+            fluidPage(
+              titlePanel(strong("Weather in Melbourne")),
+              hr()
             )
     )
   )
