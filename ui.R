@@ -73,7 +73,12 @@ body <- dashboardBody(
             fluidPage(
               titlePanel(strong("Point of Interest in Melbourne")),
               hr(),
-              leafletOutput("poi_viz", height = 850)
+              leafletOutput("poi_viz", height = 850),
+              hr(),
+              h5('Maps are created using ',
+                 a('Leaflet',
+                   href="https://rstudio.github.io/leaflet/")
+              )
             )
     )
   )

@@ -1,13 +1,18 @@
 # Helper functions
 
 # Read POI dataset
-poi_data <- read.csv('data/cleaned_poi.csv')
-colnames(poi_data) <- c('theme', 'sub_theme', 'feature_name', 'coordinates', 'lat', 'long')
+
 wifi_data <- read.csv('data/Melbourne_wifi.csv')
 city_circle <- read.csv('data/cleaned_city_circle.csv')
+landmark_data <- read.csv('data/landmark_poi.csv')
+gallery_data <- read.csv('data/gallery_poi.csv')
+church_data <- read.csv('data/church_poi.csv')
+leisure_data <- read.csv('data/leisure_poi.csv')
+visitorcenter_data <- read.csv('data/visitor_poi.csv')
+retail_data <- read.csv('data/retail_poi.csv')
 
-poiIcon <- makeIcon(
-  "www/poi.png",
+landmarkIcon <- makeIcon(
+  "www/landmark.png",
   iconWidth = 20,
   iconHeight = 20
 )
@@ -22,6 +27,36 @@ tramIcon <- makeIcon(
   "www/tram.png",
   iconWidth = 16,
   iconHeight = 16
+)
+
+museumIcon <- makeIcon(
+  "www/museum.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+churchIcon <- makeIcon(
+  "www/church.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+retailIcon <- makeIcon(
+  "www/retail.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+leisureIcon <- makeIcon(
+  "www/leisure.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+visitorcentreIcon <- makeIcon(
+  "www/information.png",
+  iconWidth = 20,
+  iconHeight = 20
 )
 
 # Theme for dashboard
