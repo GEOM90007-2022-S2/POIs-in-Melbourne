@@ -95,7 +95,11 @@ body <- dashboardBody(
     tabItem("weather",
             fluidPage(
               titlePanel(strong("Weather in Melbourne")),
-              hr()
+              hr(),
+              h5("Melbourne enjoys warm summers, glorious springs, mild autumns and crisp winters.
+                 However, it is best for visitors to best prepared for their trip in Melbourne!",
+                 style = "color: #808080;font-size:15px;"),
+              hr(),
             )
     )
   )
