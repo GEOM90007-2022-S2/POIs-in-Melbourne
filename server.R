@@ -27,6 +27,8 @@ shinyServer(function(input, output) {
       setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE)) %>%
+      
+      # Add marker for different categories of location
       addMarkers(data = landmark_data, ~long, ~lat, icon = landmarkIcon,
                  label = landmarkLabels, group = "<img src='landmark.png' height='16' width='16'> Landmark") %>%
       addMarkers(data = gallery_data, ~long, ~lat, icon = museumIcon,
@@ -45,6 +47,7 @@ shinyServer(function(input, output) {
                  label = ~NAME, group = "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
       addPolylines(data = tram_track, group = "<img src='track.png' height='16' width='16'> Tram Route",
                    opacity = 0.5) %>%
+      # Add layer control for user filter
       addLayersControl(
         overlayGroups = c("<img src='landmark.png' height='16' width='16'> Landmark",
                           "<img src='museum.png' height='16' width='16'> Gallery/Museum/Library",
@@ -57,6 +60,7 @@ shinyServer(function(input, output) {
                           "<img src='track.png' height='16' width='16'> Tram Route"),
         options = layersControlOptions(collapsed = FALSE)
       ) %>%
+      # Hide groups to keep the interface clean
       hideGroup("<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       hideGroup("<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
       hideGroup("<img src='track.png' height='16' width='16'> Tram Route")
