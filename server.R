@@ -99,21 +99,19 @@ shinyServer(function(input, output) {
   })
   
   output$weather_radial <- renderHighchart({
-    hchart(minmax_temp, type = "columnrange", 
-           hcaes(x = date, low = min_temp, 
-                 high = max_temp, color = mean_temp), showInLegend = FALSE) %>% 
+    minmax_temp %>%
+      hchart(type = "columnrange", 
+             hcaes(x = date, low = min_temp, high = max_temp, color = mean_temp), 
+             showInLegend = FALSE) %>% 
       hc_chart(polar = TRUE, height = 500) %>%  
-      hc_xAxis(
-        title = list(text = ""),
-        gridLineWidth = 0.5,
-        type = "datetime",
-        tickInterval = 30 * 24 * 3600 * 1000,
-        labels = list(format = "{value: %b}")
-      ) %>% 
-      hc_yAxis(max = 40, min = 0, labels = list(format = "{value} ºC"), showFirstLabel = FALSE) %>%
-      hc_tooltip(useHTML = TRUE,
-                 headerFormat = as.character(tags$small("{point.x:%d %B, %Y}")),
-                 pointFormat = tltip) %>%
-      hc_title(text = "Melbourne 2021 Weather Radial")
+      hc_colorAxis(minColor = '#FEB5B1', maxColor = '#6A0500') %>%
+      hc_xAxis(title = list(text = ""), gridLineWidth = 1,
+        labels = list(format = "{value: %b}")) %>% 
+      hc_yAxis(max = 30, min = 0, labels = list(format = "{value} ºC"), 
+               showFirstLabel = FALSE) %>%
+      hc_tooltip(headerFormat = as.character(tags$small("{point.x:%d %B}")),
+                 pointFormat = "<br/>Average Maximum: <b>{point.max_temp} ºC</b>
+                 <br/>Average Minimum: <b>{point.min_temp} ºC</b>") %>%
+      hc_title(text = "Melbourne Average Temperature For the Past 3 Years")
   })
 })
