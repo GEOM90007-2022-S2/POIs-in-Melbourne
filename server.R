@@ -45,6 +45,10 @@ shinyServer(function(input, output) {
                  icon = wifiIcon, group = "<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       addMarkers(data = city_circle, ~long, ~lat, icon = tramIcon,
                  label = ~NAME, group = "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
+      addMarkers(data = toilet_data, ~lon, ~lat, icon = toiletIcon,
+                 label = ~name, group = "<img src='toilet.png' height='16' width='16'> Public Toilet") %>%
+      addMarkers(data = fountain_data, ~lon, ~lat, icon = fountainIcon,
+                 label = ~Description, group = "<img src='fountain.png' height='16' width='16'> Drinking Fountain") %>%
       addPolylines(data = tram_track, group = "<img src='track.png' height='16' width='16'> Tram Route",
                    opacity = 0.5) %>%
       # Add layer control for user filter
@@ -56,6 +60,8 @@ shinyServer(function(input, output) {
                           "<img src='leisure.png' height='16' width='16'> Leisure and Recreation",
                           "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong></strong>",
                           "<img src='wifi.png' height='16' width='16'> Public Wifi Location",
+                          "<img src='fountain.png' height='16' width='16'> Drinking Fountain",
+                          "<img src='toilet.png' height='16' width='16'> Public Toilet",
                           "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram",
                           "<img src='track.png' height='16' width='16'> Tram Route"),
         options = layersControlOptions(collapsed = FALSE)

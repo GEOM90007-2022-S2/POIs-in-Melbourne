@@ -10,7 +10,8 @@ church_data <- read.csv('data/church_poi.csv')
 leisure_data <- read.csv('data/leisure_poi.csv')
 visitorcenter_data <- read.csv('data/visitor_poi.csv')
 retail_data <- read.csv('data/retail_poi.csv')
-
+fountain_data <- read.csv('data/Drinking_fountains.csv')
+toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
 
 landmarkIcon <- makeIcon(
@@ -57,6 +58,18 @@ leisureIcon <- makeIcon(
 
 visitorcentreIcon <- makeIcon(
   "www/information.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+fountainIcon <- makeIcon(
+  "www/fountain.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
+toiletIcon <- makeIcon(
+  "www/toilet.png",
   iconWidth = 20,
   iconHeight = 20
 )
