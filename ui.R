@@ -10,6 +10,7 @@ library(plotly)
 library(ggplot2)
 library(dplyr)
 library(rgdal)
+library(lubridate)
 library(mapboxapi)
 library(fontawesome)
 library(shinyWidgets)
@@ -123,6 +124,12 @@ body <- dashboardBody(
                 column(width = 10, plotlyOutput('weather.plot', width = 800)
                 )
               )
+            ),
+            hr(),
+            fluidRow(
+              column(2),
+              column(8, highchartOutput("weather_radial", height = 500)),
+              column(2)
             )
           )
     )

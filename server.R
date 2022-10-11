@@ -97,4 +97,23 @@ shinyServer(function(input, output) {
     ggplotly(weather.plot)
               
   })
+  
+  output$weather_radial <- renderHighchart({
+    hchart(minmax_temp, type = "columnrange", 
+           hcaes(x = date, low = min_temp, 
+                 high = max_temp, color = mean_temp), showInLegend = FALSE) %>% 
+      hc_chart(polar = TRUE, height = 500) %>%  
+      hc_xAxis(
+        title = list(text = ""),
+        gridLineWidth = 0.5,
+        type = "datetime",
+        tickInterval = 30 * 24 * 3600 * 1000,
+        labels = list(format = "{value: %b}")
+      ) %>% 
+      hc_yAxis(max = 40, min = 0, labels = list(format = "{value} ºC"), showFirstLabel = FALSE) %>%
+      hc_tooltip(useHTML = TRUE,
+                 headerFormat = as.character(tags$small("{point.x:%d %B, %Y}")),
+                 pointFormat = tltip) %>%
+      hc_title(text = "Melbourne 2021 Weather Radial")
+  })
 })
