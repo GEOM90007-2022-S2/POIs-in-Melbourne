@@ -110,7 +110,9 @@ shinyServer(function(input, output) {
       hc_tooltip(headerFormat = as.character(tags$small("{point.x:%d %B}")),
                  pointFormat = "<br/>Average Maximum: <b>{point.max_temp} ºC</b>
                  <br/>Average Minimum: <b>{point.min_temp} ºC</b>") %>%
-      hc_title(text = "Average Temperature For the Past 5 Years")
+      hc_title(text = "Average Temperature For the Past 5 Years") %>%
+      hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
+                  /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>')
   })
   
   output$rainfall_average <- renderHighchart({
@@ -118,6 +120,8 @@ shinyServer(function(input, output) {
     
     highchart() %>%
       hc_title(text = "Average Monthly Rainfall and Rain Days For the Past 5 Years") %>%
+      hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
+                  /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>') %>%
       hc_chart(zoomType = "x") %>%
       hc_yAxis_multiples(list(title = list(text = "Average Rain Days"), showLastLabel = TRUE, opposite = FALSE),
                          list(title = list(text = "Average Rainfall (mm)"), opposite = TRUE)) %>%
@@ -131,5 +135,18 @@ shinyServer(function(input, output) {
                     tooltip = list(pointFormat = "<br/>Average Rainfall: <b>{point.precipitation} mm</b>")) %>%
       hc_tooltip(shared = TRUE) %>%
       hc_colors(col)
+  })
+  
+  output$sunshine <- renderHighchart({
+    sunshine_duration %>%
+      hchart('areaspline', hcaes(x = month, y = duration)) %>%
+      hc_title(text = "Average Daily Sunshine Duration for each Month") %>%
+      hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
+                  /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>') %>%
+      hc_chart(zoomType = "x") %>%
+      hc_xAxis(title = list(text = "Month")) %>%
+      hc_yAxis(title = list(text = "Duration (Hours)")) %>%
+      hc_colors("#FFFF00") %>%
+      hc_tooltip(pointFormat = "Average Daily Sunshine Duration: <b>{point.duration} hours</b>")
   })
 })

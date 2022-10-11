@@ -17,6 +17,8 @@ minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
 rainfall <- read.csv('data/average_rainfall.csv')
 rainfall$month <- month.abb[rainfall$month]
+sunshine_duration <- read.csv('data/sunshine_duration.csv')
+sunshine_duration$month <- month.abb[sunshine_duration$month]
 
 # Read weather dataset
 maxTemp_data <- read.csv('data/weather_data/max_temp.csv')

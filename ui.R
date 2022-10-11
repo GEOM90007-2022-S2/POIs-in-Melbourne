@@ -132,9 +132,11 @@ body <- dashboardBody(
               column(2)
             ),
             hr(),
-            highchartOutput("rainfall_average")
+            highchartOutput("rainfall_average"),
+            hr(),
+            highchartOutput("sunshine")
+            )
           )
-    )
     )
 )
 
