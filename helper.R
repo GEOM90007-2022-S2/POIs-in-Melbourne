@@ -16,7 +16,7 @@ tram_track <- readOGR('data/Tram tracks.geojson')
 minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
 rainfall <- read.csv('data/average_rainfall.csv')
-rainfall$date <- ymd(rainfall$date)
+rainfall$month <- month.abb[rainfall$month]
 
 # Read weather dataset
 maxTemp_data <- read.csv('data/weather_data/max_temp.csv')

@@ -110,12 +110,26 @@ shinyServer(function(input, output) {
       hc_tooltip(headerFormat = as.character(tags$small("{point.x:%d %B}")),
                  pointFormat = "<br/>Average Maximum: <b>{point.max_temp} ºC</b>
                  <br/>Average Minimum: <b>{point.min_temp} ºC</b>") %>%
-      hc_title(text = "Melbourne Average Temperature For the Past 3 Years")
+      hc_title(text = "Average Temperature For the Past 5 Years")
   })
   
   output$rainfall_average <- renderHighchart({
-    rainfall %>%
-      arrange(date) %>%
-      hchart("spline", hcaes(x = date, y = precipitation))
+    col <- c("#87CEEB", "#00688B")
+    
+    highchart() %>%
+      hc_title(text = "Average Monthly Rainfall and Rain Days For the Past 5 Years") %>%
+      hc_chart(zoomType = "x") %>%
+      hc_yAxis_multiples(list(title = list(text = "Average Rain Days"), showLastLabel = TRUE, opposite = FALSE),
+                         list(title = list(text = "Average Rainfall (mm)"), opposite = TRUE)) %>%
+      hc_xAxis(title = list(text = "Month"), categories = month.abb) %>%
+      hc_add_series(rainfall, name = "Average Rain Days", "column", 
+                    hcaes(x = month, y = average_rain_days),
+                    tooltip = list(pointFormat = "Average Days of Rain: <b>{point.average_rain_days}</b>")) %>%
+      hc_plotOptions(series = list(borderRadius = 4, animation = list(duration = 3000))) %>%
+      hc_add_series(rainfall, name = "Average Rainfall", "spline", 
+                    hcaes(x = month, y = precipitation), yAxis = 1,
+                    tooltip = list(pointFormat = "<br/>Average Rainfall: <b>{point.precipitation} mm</b>")) %>%
+      hc_tooltip(shared = TRUE) %>%
+      hc_colors(col)
   })
 })
