@@ -69,6 +69,8 @@ shinyServer(function(input, output) {
       # Hide groups to keep the interface clean
       hideGroup("<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       hideGroup("<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
-      hideGroup("<img src='track.png' height='16' width='16'> Tram Route")
+      hideGroup("<img src='track.png' height='16' width='16'> Tram Route") %>%
+      hideGroup("<img src='fountain.png' height='16' width='16'> Drinking Fountain") %>%
+      hideGroup("<img src='toilet.png' height='16' width='16'> Public Toilet")
   })
 })
