@@ -130,7 +130,9 @@ body <- dashboardBody(
               column(2),
               column(8, highchartOutput("weather_radial", height = 500)),
               column(2)
-            )
+            ),
+            hr(),
+            highchartOutput("rainfall_average")
           )
     )
     )

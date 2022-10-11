@@ -15,6 +15,8 @@ toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
 minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
+rainfall <- read.csv('data/average_rainfall.csv')
+rainfall$date <- ymd(rainfall$date)
 
 # Read weather dataset
 maxTemp_data <- read.csv('data/weather_data/max_temp.csv')
@@ -119,10 +121,6 @@ retailLabels <- sprintf(
   <br/><img src=%s height='176.5' width='300'>",
   retail_data$feature_name, retail_data$theme, retail_data$url
 ) %>% lapply(htmltools::HTML)
-
-x <- c("Average Min", "Average Max")
-y <- sprintf("{point.%s} ºC", c("min_temp", "max_temp"))
-tltip <- tooltip_table(x, y)
 
 # Theme for dashboard
 customTheme <- shinyDashboardThemeDIY(

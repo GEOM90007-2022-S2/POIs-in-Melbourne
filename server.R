@@ -85,7 +85,6 @@ shinyServer(function(input, output) {
     maxTemp_data$Quality_max <- maxTemp_data$Quality
     minTemp_data$Quality_min <- minTemp_data$Quality
     Temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-    print(Temp.data)
     rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
 
     # Plot 
@@ -104,7 +103,6 @@ shinyServer(function(input, output) {
              hcaes(x = date, low = min_temp, high = max_temp, color = mean_temp), 
              showInLegend = FALSE) %>% 
       hc_chart(polar = TRUE, height = 500) %>%  
-      hc_colorAxis(minColor = '#FEB5B1', maxColor = '#6A0500') %>%
       hc_xAxis(title = list(text = ""), gridLineWidth = 1,
         labels = list(format = "{value: %b}")) %>% 
       hc_yAxis(max = 30, min = 0, labels = list(format = "{value} ºC"), 
@@ -113,5 +111,11 @@ shinyServer(function(input, output) {
                  pointFormat = "<br/>Average Maximum: <b>{point.max_temp} ºC</b>
                  <br/>Average Minimum: <b>{point.min_temp} ºC</b>") %>%
       hc_title(text = "Melbourne Average Temperature For the Past 3 Years")
+  })
+  
+  output$rainfall_average <- renderHighchart({
+    rainfall %>%
+      arrange(date) %>%
+      hchart("spline", hcaes(x = date, y = precipitation))
   })
 })
