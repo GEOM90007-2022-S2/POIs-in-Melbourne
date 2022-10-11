@@ -40,7 +40,7 @@ shinyServer(function(input, output) {
       addMarkers(data = leisure_data, ~long, ~lat, icon = leisureIcon,
                  label = leisureLabels, group = "<img src='leisure.png' height='16' width='16'> Leisure and Recreation") %>%
       addMarkers(data = visitorcenter_data, ~long, ~lat, icon = visitorcentreIcon,
-                 label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth") %>%
+                 label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong></strong>") %>%
       addMarkers(data = wifi_data, ~Longitude, ~Latitude, 
                  icon = wifiIcon, group = "<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       addMarkers(data = city_circle, ~long, ~lat, icon = tramIcon,
