@@ -55,7 +55,7 @@ shinyServer(function(input, output) {
                           "<img src='retail.png' height='16' width='16'> Retail",
                           "<img src='leisure.png' height='16' width='16'> Leisure and Recreation",
                           "<img src='information.png' height='16' width='16'> Visitor Information Booth",
-                          "<img src='wifi.png' height='16' width='16'> Public Wifi Location",
+                          "<img src='wifi.png' height='16' width='16'> Public Wifi Location<hr><strong></strong>",
                           "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram",
                           "<img src='track.png' height='16' width='16'> Tram Route"),
         options = layersControlOptions(collapsed = FALSE)
