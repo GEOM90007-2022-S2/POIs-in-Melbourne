@@ -16,12 +16,15 @@ options(highcharter.theme = hc_theme_hcrt())
 
 shinyServer(function(input, output) {
   
+  # Output Graph of Map
   output$mymap <- renderLeaflet({
     leaflet() %>% setView(lat= -37.840935, lng = 144.946457, zoom = 11) %>%
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE))
   })
   
+  
+  # Output Graph of POI
   output$poi_viz <- renderLeaflet({
     leaflet() %>%
       setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
@@ -72,5 +75,26 @@ shinyServer(function(input, output) {
       hideGroup("<img src='track.png' height='16' width='16'> Tram Route") %>%
       hideGroup("<img src='fountain.png' height='16' width='16'> Drinking Fountain") %>%
       hideGroup("<img src='toilet.png' height='16' width='16'> Public Toilet")
+  })
+  
+  
+  # Output Graph of weather
+  output$weather.plot <- renderPlotly({
+    
+    # Process Data
+    maxTemp_data$Quality_max <- maxTemp_data$Quality
+    minTemp_data$Quality_min <- minTemp_data$Quality
+    Temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+    print(Temp.data)
+    rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+
+    # Plot 
+    weather.plot <- ggplot() + 
+                geom_line(data = Temp.data, aes(x = Date, y = Maximum.temperature..Degree.C.), color = "blue") +
+                geom_line(data = Temp.data, aes(x = Date, y = Minimum.temperature..Degree.C.), color = "red") +
+                xlab('Dates') +
+                ylab('Temperature')
+    ggplotly(weather.plot)
+              
   })
 })

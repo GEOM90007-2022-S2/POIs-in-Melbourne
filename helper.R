@@ -14,6 +14,14 @@ fountain_data <- read.csv('data/Drinking_fountains.csv')
 toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
 
+# Read weather dataset
+maxTemp_data <- read.csv('data/weather_data/max_temp.csv')
+minTemp_data <- read.csv('data/weather_data/min_temp.csv')
+rainfall_data <- read.csv('data/weather_data/rainfall.csv')
+maxTemp_data$Date = as.Date(with(maxTemp_data, paste(Year,Month,Day,sep="-")),"%Y-%m-%d")
+minTemp_data$Date = as.Date(with(minTemp_data, paste(Year,Month,Day,sep="-")),"%Y-%m-%d")
+rainfall_data$Date = as.Date(with(rainfall_data, paste(Year,Month,Day,sep="-")),"%Y-%m-%d")
+
 landmarkIcon <- makeIcon(
   "www/landmark.png",
   iconWidth = 20,

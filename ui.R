@@ -6,6 +6,9 @@
 library(shiny)
 library(shinythemes)
 library(leaflet)
+library(plotly)
+library(ggplot2)
+library(dplyr)
 library(rgdal)
 library(mapboxapi)
 library(fontawesome)
@@ -60,7 +63,7 @@ body <- dashboardBody(
               ),
               hr(),
               fluidRow(
-                column(12, leafletOutput("mymap")),
+                column(12, leafletOutput("mymap"))
               ),
               hr(),
               h5('Maps are created using ',
@@ -100,9 +103,30 @@ body <- dashboardBody(
                  However, it is best for visitors to best prepared for their trip in Melbourne!",
                  style = "color: #808080;font-size:15px;"),
               hr(),
+              # Add Interaction Bar
+              fluidRow(
+                column(width=3,
+                       # Selection between Years
+                       # selectInput('weatherYear','Start Year', choices = c(unique(maxTemp_data$Year)), multiple = F,selected = '2022'),
+                       # # Selection between Months
+                       # selectInput('weatherMonth','Start Month', choices = c(unique(maxTemp_data$Month)),multiple = F, selected = '10'),
+                       # # Selection between Days 
+                       # selectInput('weatherDay','Start Day', choices = c(unique(maxTemp_data$Day)), multiple = F, selected = '9'),
+                       # Selection between Date
+                       dateRangeInput(
+                         inputId = "dates",
+                         label = h3("Date range"),
+                         start = "2022-10-03",
+                         end = "2022-10-09",
+                         min = "2013-01-01",
+                         max = "2022-10-09"),
+                column(width = 10, plotlyOutput('weather.plot', width = 800)
+                )
+              )
             )
+          )
     )
-  )
+    )
 )
 
 # Putting the UI together
