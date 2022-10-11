@@ -40,7 +40,7 @@ shinyServer(function(input, output) {
       addMarkers(data = leisure_data, ~long, ~lat, icon = leisureIcon,
                  label = leisureLabels, group = "<img src='leisure.png' height='16' width='16'> Leisure and Recreation") %>%
       addMarkers(data = visitorcenter_data, ~long, ~lat, icon = visitorcentreIcon,
-                 label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong></strong>") %>%
+                 label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong>Utilities</strong>") %>%
       addMarkers(data = wifi_data, ~Longitude, ~Latitude, 
                  icon = wifiIcon, group = "<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
       addMarkers(data = city_circle, ~long, ~lat, icon = tramIcon,
@@ -58,7 +58,7 @@ shinyServer(function(input, output) {
                           "<img src='church.png' height='16' width='16'> Place of Worship",
                           "<img src='retail.png' height='16' width='16'> Retail",
                           "<img src='leisure.png' height='16' width='16'> Leisure and Recreation",
-                          "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong></strong>",
+                          "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong>Utilities</strong>",
                           "<img src='wifi.png' height='16' width='16'> Public Wifi Location",
                           "<img src='fountain.png' height='16' width='16'> Drinking Fountain",
                           "<img src='toilet.png' height='16' width='16'> Public Toilet",
