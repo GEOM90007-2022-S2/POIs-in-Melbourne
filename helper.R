@@ -20,6 +20,18 @@ rainfall$month <- month.abb[rainfall$month]
 sunshine_duration <- read.csv('data/sunshine_duration.csv')
 sunshine_duration$month <- month.abb[sunshine_duration$month]
 
+current_weather <- get_current("Melbourne, AU", units = "metric")
+
+forecast_data <- get_forecast("Melbourne, AU", units = "metric")
+forecast_df <- data.frame(
+  tmstmp =  forecast_data$list$dt_txt,
+  temp = forecast_data$list$main.temp,
+  fl_temp = forecast_data$list$main.feels_like,
+  humidity = forecast_data$list$main.humidity
+)
+forecast_df$tmstmp <- ymd_hms(forecast_df$tmstmp)
+forecast_df$tmstmp <- as.POSIXlt(forecast_df$tmstmp, tz="Australia/Sydney")
+
 # Read weather dataset
 maxTemp_data <- read.csv('data/weather_data/max_temp.csv')
 minTemp_data <- read.csv('data/weather_data/min_temp.csv')

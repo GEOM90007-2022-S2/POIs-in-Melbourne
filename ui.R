@@ -9,6 +9,7 @@ library(leaflet)
 library(plotly)
 library(ggplot2)
 library(dplyr)
+library(owmr)
 library(rgdal)
 library(lubridate)
 library(mapboxapi)
@@ -104,6 +105,17 @@ body <- dashboardBody(
                  However, it is best for visitors to best prepared for their trip in Melbourne!",
                  style = "color: #808080;font-size:15px;"),
               hr(),
+              h5(strong("Current Weather Overview"),
+                 style = "font-size:16px;"),
+              
+              # Value box
+              fluidRow(
+                column(3, valueBoxOutput("cur_temp", width = 14)),
+                column(3, valueBoxOutput("rainfall_1hr", width = 14)),
+                column(3, valueBoxOutput("current_condition", width = 14)),
+                column(3, valueBoxOutput("sunset", width = 14))
+              ),
+              hr(),
               # Add Interaction Bar
               fluidRow(
                 column(width=12,
@@ -124,9 +136,9 @@ body <- dashboardBody(
               )
               
             ),
-            fluidRow(
-              column(highchartOutput('weather_plot'), width=12)
-            ),
+            highchartOutput('weather_plot'),
+            hr(),
+            highchartOutput("weather_forecast"),
             hr(),
             fluidRow(
               column(2),

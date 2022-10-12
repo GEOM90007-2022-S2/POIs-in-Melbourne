@@ -13,8 +13,14 @@ source('helper.R')
 
 # Set a global theme highcharter plot
 options(highcharter.theme = hc_theme_hcrt())
+global <- getOption("highcharter.global")
+global$useUTC <- FALSE
+global$timezoneOffset <- -300
+options(highcharter.global = global)
 
 shinyServer(function(input, output) {
+  
+  ############################## Map Outputs ##############################
   
   # Output Graph of Map
   output$mymap <- renderLeaflet({
@@ -77,6 +83,36 @@ shinyServer(function(input, output) {
       hideGroup("<img src='toilet.png' height='16' width='16'> Public Toilet")
   })
   
+  ############################## Weather Outputs ##############################
+  
+  output$cur_temp <- renderValueBox(
+    valueBox(
+      value = paste(current_weather$main$temp, "ºC"), subtitle = "Current Temperature",
+      icon = fa_i("fas fa-temperature-three-quarters"), color = "light-blue"
+    )
+  )
+  
+  output$rainfall_1hr <- renderValueBox(
+    valueBox(
+      value = paste(current_weather$rain$`1h`, "mm"), subtitle = "Rainfall in Last Hour",
+      icon = fa_i("fas fa-droplet"), color = "blue"
+    )
+  )
+  
+  output$current_condition <- renderValueBox(
+    valueBox(
+      value = str_to_title(current_weather$weather$description), subtitle = "Current Condition",
+      icon = fa_i("fas fa-circle-info"), color = "teal"
+    )
+  )
+  
+  output$sunset <- renderValueBox(
+    valueBox(
+      value = substr(as_datetime(cur_weather$sys$sunset, tz = "Australia/Sydney"), 12, 16), 
+      subtitle = "Expected Sunset Time",
+      icon = fa_i("fas fa-sun"), color = "orange"
+    )
+  )
   
   # Output Graph of weather
   output$weather_plot <- renderHighchart({
@@ -88,7 +124,7 @@ shinyServer(function(input, output) {
     temp.data$maxTemp = temp.data$Maximum.temperature..Degree.C.
     temp.data$minTemp = temp.data$Minimum.temperature..Degree.C.
     rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-  
+    
     col <- c("#eb8787", "#87CEEB")
     highchart() %>%
       hc_title(text = "Forecast Daily Maximum & Minimum Temperature") %>%
@@ -100,18 +136,36 @@ shinyServer(function(input, output) {
       hc_xAxis(dateTimeLabelFormats = list(day = '%d %b %y'), type = "datetime") %>%
       hc_tooltip(shared = TRUE) %>%
       hc_colors(col)
-      
-              
+  })
+  
+  output$weather_forecast <- renderHighchart({
+    forecast_df$tmstmp <- datetime_to_timestamp(forecast_df$tmstmp)
+    
+    forecast_df %>%
+      hchart("spline", hcaes(x = tmstmp, y = temp)) %>%
+      hc_xAxis(type = "datetime",
+               tickInterval = 24 * 3600 * 1000,
+               dateTimeLabelFormats = list(day='%d %b %Y'), 
+               labels = list(enabled = TRUE, format = '{value:%Y-%m-%d}'),
+               title = list(text = "Datetime")) %>%
+      hc_yAxis(title = list(text = "Forecast Temperature"), 
+               labels = list(format = "{value} ºC")) %>%
+      hc_title(text = "Forecast Temperature of Next 5 Days") %>%
+      hc_subtitle(text = 'Source: <a href="https://home.openweathermap.org" 
+                  target="_blank">OpenWeather</a>') %>%
+      hc_tooltip(pointFormat = "<br/>Forecast Temperature: <b>{point.temp} ºC</b>
+                 <br/>Feels Like: <b>{point.fl_temp} ºC</b>") %>%
+      hc_colors("#03A9F4")
   })
   
   output$weather_radial <- renderHighchart({
     minmax_temp %>%
-      hchart(type = "columnrange", 
+      hchart(type = "columnrange",
              hcaes(x = date, low = min_temp, high = max_temp, color = mean_temp), 
              showInLegend = FALSE) %>% 
       hc_chart(polar = TRUE, height = 500) %>%  
       hc_xAxis(title = list(text = ""), gridLineWidth = 1,
-        labels = list(format = "{value: %b}")) %>% 
+               labels = list(format = "{value: %b}")) %>% 
       hc_yAxis(max = 30, min = 0, labels = list(format = "{value} ºC"), 
                showFirstLabel = FALSE) %>%
       hc_tooltip(headerFormat = as.character(tags$small("{point.x:%d %B}")),
