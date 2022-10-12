@@ -117,10 +117,10 @@ body <- dashboardBody(
                        dateRangeInput(
                          inputId = "dates",
                          label = h3("Date range"),
-                         start = "2022-10-03",
-                         end = "2022-10-09",
+                         start = format(Sys.time(), "%Y-%m-%d"),
+                         end = format(Sys.time() + days(10), "%Y-%m-%d"),
                          min = "2013-01-01",
-                         max = "2022-10-09"),
+                         max = "2023-12-31"),
               )
               
             ),

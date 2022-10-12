@@ -91,7 +91,7 @@ shinyServer(function(input, output) {
   
     col <- c("#eb8787", "#87CEEB")
     highchart() %>%
-      hc_title(text = "Daily Maximum & Minimum Temperature") %>%
+      hc_title(text = "Forecast Daily Maximum & Minimum Temperature") %>%
       hc_add_series(temp.data, name = "Maximum Temperature", "spline", 
                     hcaes(x = Date, y = maxTemp)) %>%
       hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
