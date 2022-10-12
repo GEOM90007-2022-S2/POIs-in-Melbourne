@@ -148,9 +148,20 @@ body <- dashboardBody(
             hr(),
             highchartOutput("rainfall_average"),
             hr(),
-            highchartOutput("sunshine")
+            highchartOutput("sunshine"),
+            hr(),
+            h5('Live Weather Data Source: ', 
+               a("OpenWeather",
+                 href="https://openweathermap.org")),
+            h5('Historic Weather Data Source: ', 
+               a("Bureau of Meteorology",
+                 href="http://www.bom.gov.au")),
+            h5('Charts are created using ', 
+               a("Highcharter", 
+                 href="https://jkunst.com/highcharter/"), 
+               '(a R wrapper for Highcharts)')
             )
-          )
+        )
     )
 )
 

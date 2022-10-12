@@ -12,6 +12,7 @@ library(dashboardthemes)
 source('helper.R')
 
 # Set a global theme highcharter plot
+Sys.setenv(OWM_API_KEY = "25396bb7b2590590fcb12cf2b69fbcc7")
 options(highcharter.theme = hc_theme_hcrt())
 global <- getOption("highcharter.global")
 global$useUTC <- FALSE
