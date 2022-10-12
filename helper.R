@@ -1,6 +1,7 @@
 # Helper functions
 
 # Read POI dataset
+Sys.setenv(OWM_API_KEY = "25396bb7b2590590fcb12cf2b69fbcc7")
 
 wifi_data <- read.csv('data/Melbourne_wifi.csv')
 city_circle <- read.csv('data/cleaned_city_circle.csv')

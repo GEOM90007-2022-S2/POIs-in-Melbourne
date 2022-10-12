@@ -12,7 +12,6 @@ library(dashboardthemes)
 source('helper.R')
 
 # Set a global theme highcharter plot
-Sys.setenv(OWM_API_KEY = "25396bb7b2590590fcb12cf2b69fbcc7")
 options(highcharter.theme = hc_theme_hcrt())
 global <- getOption("highcharter.global")
 global$useUTC <- FALSE
@@ -88,7 +87,7 @@ shinyServer(function(input, output) {
   
   output$cur_temp <- renderValueBox(
     valueBox(
-      value = paste(current_weather$main$temp, "ºC"), subtitle = "Current Temperature",
+      value = paste(round(current_weather$main$temp), "ºC"), subtitle = "Current Temperature",
       icon = fa_i("fas fa-temperature-three-quarters"), color = "light-blue"
     )
   )
@@ -109,7 +108,7 @@ shinyServer(function(input, output) {
   
   output$sunset <- renderValueBox(
     valueBox(
-      value = substr(as_datetime(cur_weather$sys$sunset, tz = "Australia/Sydney"), 12, 16), 
+      value = substr(as_datetime(current_weather$sys$sunset, tz = "Australia/Sydney"), 12, 16), 
       subtitle = "Expected Sunset Time",
       icon = fa_i("fas fa-sun"), color = "orange"
     )
