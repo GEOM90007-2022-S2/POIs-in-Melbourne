@@ -97,7 +97,7 @@ shinyServer(function(input, output) {
       hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
                     hcaes(x = Date, y = minTemp)) %>%
       hc_tooltip(headerFormat = as.character(tags$small(""))) %>%
-      hc_xAxis(labels = list(format = '{value:%d %b %y}')) %>%
+      hc_xAxis(dateTimeLabelFormats = list(day = '%d %b %y'), type = "datetime") %>%
       hc_tooltip(shared = TRUE) %>%
       hc_colors(col)
       
