@@ -10,7 +10,7 @@ jobs:
       - uses: r-lib/actions/setup-r@master
       - name: Install shiny
         run: |
-          install.packages(c("shiny", "shinydashboard", "shinythemes", "rsconnect", "leaflet", "mapboxapi", "fontawesome", "shinyWidgets", "igraph", "highcharter", "dashboardthemes", "rgdal"), type = "binary")
+          install.packages(c("shiny", "shinydashboard", "shinythemes", "rsconnect", "leaflet", "plotly", "mapboxapi", "fontawesome", "shinyWidgets", "igraph", "highcharter", "dashboardthemes", "rgdal"), type = "binary")
         shell: Rscript {0}
       - name: Push to shiny.io
         run: |
