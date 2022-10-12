@@ -106,7 +106,7 @@ body <- dashboardBody(
               hr(),
               # Add Interaction Bar
               fluidRow(
-                column(width=3,
+                column(width=12,
                        # Selection between Years
                        # selectInput('weatherYear','Start Year', choices = c(unique(maxTemp_data$Year)), multiple = F,selected = '2022'),
                        # # Selection between Months
@@ -121,9 +121,11 @@ body <- dashboardBody(
                          end = "2022-10-09",
                          min = "2013-01-01",
                          max = "2022-10-09"),
-                column(width = 10, plotlyOutput('weather.plot', width = 800)
-                )
               )
+              
+            ),
+            fluidRow(
+              column(highchartOutput('weather_plot'), width=12)
             ),
             hr(),
             fluidRow(

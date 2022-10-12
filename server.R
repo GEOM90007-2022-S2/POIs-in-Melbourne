@@ -79,21 +79,28 @@ shinyServer(function(input, output) {
   
   
   # Output Graph of weather
-  output$weather.plot <- renderPlotly({
+  output$weather_plot <- renderHighchart({
     
     # Process Data
     maxTemp_data$Quality_max <- maxTemp_data$Quality
     minTemp_data$Quality_min <- minTemp_data$Quality
-    Temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+    temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+    temp.data$maxTemp = temp.data$Maximum.temperature..Degree.C.
+    temp.data$minTemp = temp.data$Minimum.temperature..Degree.C.
     rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-
-    # Plot 
-    weather.plot <- ggplot() + 
-                geom_line(data = Temp.data, aes(x = Date, y = Maximum.temperature..Degree.C.), color = "blue") +
-                geom_line(data = Temp.data, aes(x = Date, y = Minimum.temperature..Degree.C.), color = "red") +
-                xlab('Dates') +
-                ylab('Temperature')
-    ggplotly(weather.plot)
+  
+    col <- c("#eb8787", "#87CEEB")
+    highchart() %>%
+      hc_title(text = "Daily Maximum & Minimum Temperature") %>%
+      hc_add_series(temp.data, name = "Maximum Temperature", "spline", 
+                    hcaes(x = Date, y = maxTemp)) %>%
+      hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
+                    hcaes(x = Date, y = minTemp)) %>%
+      hc_tooltip(headerFormat = as.character(tags$small(""))) %>%
+      hc_xAxis(labels = list(format = '{value:%d %b %y}')) %>%
+      hc_tooltip(shared = TRUE) %>%
+      hc_colors(col)
+      
               
   })
   
