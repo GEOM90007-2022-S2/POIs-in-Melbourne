@@ -87,56 +87,63 @@ shinyServer(function(input, output) {
   
   output$cur_temp <- renderValueBox(
     valueBox(
-      value = paste(round(current_weather$main$temp), "ºC"), subtitle = "Current Temperature",
-      icon = fa_i("fas fa-temperature-three-quarters"), color = "light-blue"
+      value = tags$p(paste(round(current_weather$main$temp), "ºC"), style = "font-size: 85%;"), 
+      subtitle = paste("Feels like", round(current_weather$main$feels_like), "ºC"),
+      icon = fa_i("fas fa-temperature-three-quarters"), 
+      color = "light-blue"
     )
   )
   
   output$rainfall_1hr <- renderValueBox(
     valueBox(
-      value = paste(current_weather$rain$`1h`, "mm"), subtitle = "Rainfall in Last Hour",
+      value = tags$p(paste(current_weather$rain$`1h`, "mm"), style = "font-size: 85%;"), 
+      subtitle = "Rainfall in Last Hour",
       icon = fa_i("fas fa-droplet"), color = "blue"
     )
   )
   
   output$current_condition <- renderValueBox(
     valueBox(
-      value = str_to_title(current_weather$weather$description), subtitle = "Current Condition",
+      value = tags$p(str_to_title(current_weather$weather$description), 
+                     style = "font-size: 85%;"), 
+      subtitle = "Current Condition",
       icon = fa_i("fas fa-circle-info"), color = "teal"
     )
   )
   
   output$sunset <- renderValueBox(
     valueBox(
-      value = substr(as_datetime(current_weather$sys$sunset, tz = "Australia/Sydney"), 12, 16), 
+      value = tags$p(substr(
+        as_datetime(current_weather$sys$sunset, 
+                    tz = "Australia/Sydney"), 12, 16), style = "font-size: 85%;"), 
       subtitle = "Expected Sunset Time",
       icon = fa_i("fas fa-sun"), color = "orange"
     )
   )
   
   # Output Graph of weather
-  output$weather_plot <- renderHighchart({
-    
+  #output$weather_plot <- renderHighchart({
+  #  
     # Process Data
-    maxTemp_data$Quality_max <- maxTemp_data$Quality
-    minTemp_data$Quality_min <- minTemp_data$Quality
-    temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-    temp.data$maxTemp = temp.data$Maximum.temperature..Degree.C.
-    temp.data$minTemp = temp.data$Minimum.temperature..Degree.C.
-    rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+  #  maxTemp_data$Quality_max <- maxTemp_data$Quality
+  #  minTemp_data$Quality_min <- minTemp_data$Quality
+  #  temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
+  #  temp.data$maxTemp = temp.data$Maximum.temperature..Degree.C.
+  #  temp.data$minTemp = temp.data$Minimum.temperature..Degree.C.
+  #  rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
     
-    col <- c("#eb8787", "#87CEEB")
-    highchart() %>%
-      hc_title(text = "Forecast Daily Maximum & Minimum Temperature") %>%
-      hc_add_series(temp.data, name = "Maximum Temperature", "spline", 
-                    hcaes(x = Date, y = maxTemp)) %>%
-      hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
-                    hcaes(x = Date, y = minTemp)) %>%
-      hc_tooltip(headerFormat = as.character(tags$small(""))) %>%
-      hc_xAxis(dateTimeLabelFormats = list(day = '%d %b %y'), type = "datetime") %>%
-      hc_tooltip(shared = TRUE) %>%
-      hc_colors(col)
-  })
+  #  col <- c("#eb8787", "#87CEEB")
+  #  highchart() %>%
+  #    hc_title(text = "Forecast Daily Maximum & Minimum Temperature") %>%
+  #    hc_add_series(temp.data, name = "Maximum Temperature", "spline", 
+  #                  hcaes(x = Date, y = maxTemp)) %>%
+  #    hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
+  #                  hcaes(x = Date, y = minTemp)) %>%
+  #    hc_tooltip(headerFormat = as.character(tags$small(""))) %>%
+  #    hc_xAxis(dateTimeLabelFormats = list(day = '%d %b %y'), type = "datetime") %>%
+  #    hc_tooltip(shared = TRUE) %>%
+  #    hc_colors(col)
+  #})
   
   output$weather_forecast <- renderHighchart({
     forecast_df$tmstmp <- datetime_to_timestamp(forecast_df$tmstmp)
@@ -155,6 +162,27 @@ shinyServer(function(input, output) {
                   target="_blank">OpenWeather</a>') %>%
       hc_tooltip(pointFormat = "<br/>Forecast Temperature: <b>{point.temp} ºC</b>
                  <br/>Feels Like: <b>{point.fl_temp} ºC</b>") %>%
+      hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
+      hc_colors("#E6CC00")
+  })
+  
+  output$humidity_forecast <- renderHighchart({
+    forecast_df$tmstmp <- datetime_to_timestamp(forecast_df$tmstmp)
+    
+    forecast_df %>%
+      hchart("spline", hcaes(x = tmstmp, y = humidity)) %>%
+      hc_xAxis(type = "datetime",
+               tickInterval = 24 * 3600 * 1000,
+               dateTimeLabelFormats = list(day='%d %b %Y'), 
+               labels = list(enabled = TRUE, format = '{value:%Y-%m-%d}'),
+               title = list(text = "Datetime")) %>%
+      hc_yAxis(title = list(text = "Forecast Humidity"), 
+               labels = list(format = "{value}%")) %>%
+      hc_title(text = "Forecast Humidity of Next 5 Days") %>%
+      hc_subtitle(text = 'Source: <a href="https://home.openweathermap.org" 
+                  target="_blank">OpenWeather</a>') %>%
+      hc_tooltip(pointFormat = "<br/>Forecast Humidity: <b>{point.humidity}%</b>") %>%
+      hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
       hc_colors("#03A9F4")
   })
   
@@ -180,7 +208,7 @@ shinyServer(function(input, output) {
     col <- c("#87CEEB", "#00688B")
     
     highchart() %>%
-      hc_title(text = "Average Monthly Rainfall and Rain Days For the Past 5 Years") %>%
+      hc_title(text = "Average Monthly Rainfall and Days of Rain For the Past 5 Years") %>%
       hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
                   /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>') %>%
       hc_chart(zoomType = "x") %>%
@@ -207,6 +235,7 @@ shinyServer(function(input, output) {
       hc_chart(zoomType = "x") %>%
       hc_xAxis(title = list(text = "Month")) %>%
       hc_yAxis(title = list(text = "Duration (Hours)")) %>%
+      hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
       hc_colors("#FFFF00") %>%
       hc_tooltip(pointFormat = "Average Daily Sunshine Duration: <b>{point.duration} hours</b>")
   })

@@ -37,7 +37,7 @@ sidebar <- dashboardSidebar(
              tabName = "home",
              selected = T,
              icon = fa_i('fas fa-house')),
-    menuItem("Point of Interest",
+    menuItem("Places to Visit",
              tabName = "poi",
              icon = fa_i('fas fa-map-location-dot')),
     menuItem("Melbourne Weather",
@@ -105,7 +105,8 @@ body <- dashboardBody(
                  However, it is best for visitors to best prepared for their trip in Melbourne!",
                  style = "color: #808080;font-size:15px;"),
               hr(),
-              h5(strong("Current Weather Overview"),
+              h5(strong(paste("Current Weather Overview of", 
+                              substr(as_datetime(current_weather$dt, tz = "Australia/Sydney"), 1, 10))),
                  style = "font-size:16px;"),
               
               # Value box
@@ -117,8 +118,8 @@ body <- dashboardBody(
               ),
               hr(),
               # Add Interaction Bar
-              fluidRow(
-                column(width=12,
+              #fluidRow(
+              #  column(width=12,
                        # Selection between Years
                        # selectInput('weatherYear','Start Year', choices = c(unique(maxTemp_data$Year)), multiple = F,selected = '2022'),
                        # # Selection between Months
@@ -126,42 +127,45 @@ body <- dashboardBody(
                        # # Selection between Days 
                        # selectInput('weatherDay','Start Day', choices = c(unique(maxTemp_data$Day)), multiple = F, selected = '9'),
                        # Selection between Date
-                       dateRangeInput(
-                         inputId = "dates",
-                         label = h3("Date range"),
-                         start = format(Sys.time(), "%Y-%m-%d"),
-                         end = format(Sys.time() + days(10), "%Y-%m-%d"),
-                         min = "2013-01-01",
-                         max = "2023-12-31"),
+              #         dateRangeInput(
+              #           inputId = "dates",
+              #           label = h3("Date range"),
+              #           start = format(Sys.time(), "%Y-%m-%d"),
+              #           end = format(Sys.time() + days(10), "%Y-%m-%d"),
+              #           min = "2013-01-01",
+              #           max = "2023-12-31"),
+              #)
+              #highchartOutput('weather_plot'),
+              #hr(),
+              fluidRow(
+                column(6, highchartOutput("weather_forecast")),
+                column(6, highchartOutput("humidity_forecast"))
+              ),
+              hr(),
+              h3("Melbourne Historical Weather Observations"),
+              hr(),
+              fluidRow(
+                column(2),
+                column(8, highchartOutput("weather_radial", height = 500)),
+                column(2)
+              ),
+              hr(),
+              highchartOutput("rainfall_average"),
+              hr(),
+              highchartOutput("sunshine"),
+              hr(),
+              h5('Live Weather Data Source: ', 
+                 a("OpenWeather",
+                   href="https://openweathermap.org")),
+              h5('Historic Weather Data Source: ', 
+                 a("Bureau of Meteorology",
+                   href="http://www.bom.gov.au")),
+              h5('Charts are created using ', 
+                 a("Highcharter", 
+                   href="https://jkunst.com/highcharter/"), 
+                 '(a R wrapper for Highcharts)')
               )
-              
-            ),
-            highchartOutput('weather_plot'),
-            hr(),
-            highchartOutput("weather_forecast"),
-            hr(),
-            fluidRow(
-              column(2),
-              column(8, highchartOutput("weather_radial", height = 500)),
-              column(2)
-            ),
-            hr(),
-            highchartOutput("rainfall_average"),
-            hr(),
-            highchartOutput("sunshine"),
-            hr(),
-            h5('Live Weather Data Source: ', 
-               a("OpenWeather",
-                 href="https://openweathermap.org")),
-            h5('Historic Weather Data Source: ', 
-               a("Bureau of Meteorology",
-                 href="http://www.bom.gov.au")),
-            h5('Charts are created using ', 
-               a("Highcharter", 
-                 href="https://jkunst.com/highcharter/"), 
-               '(a R wrapper for Highcharts)')
             )
-        )
     )
 )
 
