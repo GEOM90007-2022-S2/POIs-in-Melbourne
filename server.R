@@ -96,7 +96,7 @@ shinyServer(function(input, output) {
   
   output$rainfall_1hr <- renderValueBox(
     valueBox(
-      value = tags$p(paste(current_weather$rain$`1h`, "mm"), style = "font-size: 85%;"), 
+      value = tags$p(paste(rain_measure, "mm"), style = "font-size: 85%;"), 
       subtitle = "Rainfall in Last Hour",
       icon = fa_i("fas fa-droplet"), color = "blue"
     )
@@ -239,4 +239,8 @@ shinyServer(function(input, output) {
       hc_colors("#FFFF00") %>%
       hc_tooltip(pointFormat = "Average Daily Sunshine Duration: <b>{point.duration} hours</b>")
   })
+  
+  ############################## Tour Page Outputs ##############################
+  
+  
 })

@@ -42,7 +42,10 @@ sidebar <- dashboardSidebar(
              icon = fa_i('fas fa-map-location-dot')),
     menuItem("Melbourne Weather",
              tabName = "weather",
-             icon = fa_i('fas fa-sun'))
+             icon = fa_i('fas fa-sun')),
+    menuItem("Tourism Industry Recovery",
+             tabName = "tour",
+             icon = fa_i('fas fa-plane'))
   )
 )
 
@@ -52,9 +55,6 @@ body <- dashboardBody(
     # Structure for home tab
     tabItem("home",
             fluidPage(
-              # Title for home tab
-              titlePanel(strong("Get Set To Discover Melbourne")),
-              hr(),
               fluidRow(
                 includeHTML("home.html"),
                 tags$head(
@@ -142,7 +142,7 @@ body <- dashboardBody(
                 column(6, highchartOutput("humidity_forecast"))
               ),
               hr(),
-              h3("Melbourne Historical Weather Observations"),
+              h4(strong("Melbourne Historical Weather Observations")),
               hr(),
               fluidRow(
                 column(2),
@@ -165,7 +165,15 @@ body <- dashboardBody(
                    href="https://jkunst.com/highcharter/"), 
                  '(a R wrapper for Highcharts)')
               )
+            ),
+    tabItem("tour",
+            fluidPage(
+              titlePanel(strong("Tourism Industry is Slowly Recovering")),
+              hr(),
+              highchartOutput("arrival"),
+              hr()
             )
+        )
     )
 )
 

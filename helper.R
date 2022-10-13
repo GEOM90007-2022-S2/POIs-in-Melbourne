@@ -14,6 +14,7 @@ retail_data <- read.csv('data/retail_poi.csv')
 fountain_data <- read.csv('data/Drinking_fountains.csv')
 toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
+vic_arrival <- read.csv('data/vic-arrival.csv')
 minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
 rainfall <- read.csv('data/average_rainfall.csv')
@@ -22,6 +23,7 @@ sunshine_duration <- read.csv('data/sunshine_duration.csv')
 sunshine_duration$month <- month.abb[sunshine_duration$month]
 
 current_weather <- get_current("Melbourne, AU", units = "metric")
+rain_measure <- ifelse(is.null(current_weather$rain$`1h`), 0, current_weather$rain$`1h`)
 
 forecast_data <- get_forecast("Melbourne, AU", units = "metric")
 forecast_df <- data.frame(
