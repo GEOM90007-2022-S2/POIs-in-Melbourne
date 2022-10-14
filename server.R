@@ -18,7 +18,8 @@ global$useUTC <- FALSE
 global$timezoneOffset <- -300
 options(highcharter.global = global)
 
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
+  values = reactiveValues()
   
   ############################## Map Outputs ##############################
   
@@ -28,6 +29,7 @@ shinyServer(function(input, output) {
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE))
   })
+  
   
   
   # Output Graph of POI
@@ -266,31 +268,48 @@ shinyServer(function(input, output) {
   })
 
   ############################## Traffic Page Outputs ###########################
-  output$traffic_map = renderLeaflet({
+  output$trafficMap = renderLeaflet({
     
     tdata = traffic_2022_data %>% group_by(Sensor_Name, latitude, longitude) %>% summarise()
-    leaflet() %>%
+    tdata$popup <- paste0('<b>', tdata$Sensor_Name, '</b><br/>',
+                              'Location: ', tdata$latitude, ', ', tdata$longitude)
+    leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
       setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE)) %>%
-      addMarkers(data = tdata, ~longitude, ~latitude)
+      addMarkers(data = tdata, ~longitude, ~latitude, popup=~popup, icon = sensorIcon)
   })
+  
+  observe({
+    event = input$trafficMap_marker_click
+    if (is.null(event))
+      return()
+    
+    isolate({
+      sensorNameSelected = filter(traffic_2022_data, abs(longitude - event$lng) < 0.0001 & abs(latitude - event$lat) < 0.0001)[1,1]
+      updateSelectInput(session, 'pdsensor', selected=sensorNameSelected)
+    })
+  })
+  
+  
   
   output$traffic_day_hour = renderHighchart({
     day_of_week_order = c('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
-    data = traffic_2022_data %>% 
+    sensorSelected = input$pdsensor
+    tgdata = filter(traffic_2022_data, Sensor_Name == sensorSelected)
+    tgdata = tgdata %>% 
             group_by(Day, Time) %>% 
             dplyr::summarize(hourly_counts_mean = round(mean(Hourly_Counts, na.rm=TRUE))) %>%
             arrange(match(Day, day_of_week_order))
     
-    data %>%
+    tgdata %>%
       hchart("heatmap", hcaes(x=Day,y=Time,value=hourly_counts_mean)) %>%
+      hc_title(text = paste("Average Pedestrian Counts @ ", sensorSelected)) %>%
       hc_yAxis(title = list(text = "Time"), categories = c(0:23)) %>%
       hc_xAxis(title = list(text = "Day of Week"), categories = day_of_week_order) %>%
-      hc_tooltip(headerFormat = "<b>Traffic</b>",
-                 pointFormat = "<br/><b>Time: {point.Time}</b><br/>Average Visit Counts: <b>{point.hourly_counts_mean}</b>")
-      
-    #, categories = list('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+      hc_tooltip(headerFormat = paste("<b>", sensorSelected, "</b>"),
+                 pointFormat = "<br/><b>Average Pedestrian Counts @ {point.Time}00: {point.hourly_counts_mean} persons</b>") %>%
+      hc_plotOptions(series = list(animation = F))
   })
   
 })

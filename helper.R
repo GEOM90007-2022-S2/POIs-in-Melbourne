@@ -116,6 +116,12 @@ shuttleIcon <- makeIcon(
   iconHeight = 20
 )
 
+sensorIcon <- makeIcon(
+  "www/sensor.png",
+  iconWidth = 20,
+  iconHeight = 20
+)
+
 landmarkLabels <- sprintf(
   "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
   <br/><img src=%s height='176.5' width='300'>",
