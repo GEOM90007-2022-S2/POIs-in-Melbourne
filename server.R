@@ -60,6 +60,7 @@ shinyServer(function(input, output) {
                  label = ~Description, group = "<img src='fountain.png' height='16' width='16'> Drinking Fountain") %>%
       addPolylines(data = tram_track, group = "<img src='track.png' height='16' width='16'> Tram Route",
                    opacity = 0.5) %>%
+      addScaleBar(position = "bottomright") %>%
       # Add layer control for user filter
       addLayersControl(
         overlayGroups = c("<img src='landmark.png' height='16' width='16'> Landmark",
@@ -117,7 +118,7 @@ shinyServer(function(input, output) {
         as_datetime(current_weather$sys$sunset, 
                     tz = "Australia/Sydney"), 12, 16), style = "font-size: 85%;"), 
       subtitle = "Expected Sunset Time",
-      icon = fa_i("fas fa-sun"), color = "orange"
+      icon = tags$i(class = "fas fa-sun"), color = "orange"
     )
   )
   
@@ -191,7 +192,7 @@ shinyServer(function(input, output) {
       hchart(type = "columnrange",
              hcaes(x = date, low = min_temp, high = max_temp, color = mean_temp), 
              showInLegend = FALSE) %>% 
-      hc_chart(polar = TRUE, height = 500) %>%  
+      hc_chart(polar = TRUE) %>%  
       hc_xAxis(title = list(text = ""), gridLineWidth = 1,
                labels = list(format = "{value: %b}")) %>% 
       hc_yAxis(max = 30, min = 0, labels = list(format = "{value} ºC"), 
@@ -228,8 +229,9 @@ shinyServer(function(input, output) {
   
   output$sunshine <- renderHighchart({
     sunshine_duration %>%
-      hchart('areaspline', hcaes(x = month, y = duration)) %>%
-      hc_title(text = "Average Daily Sunshine Duration for each Month") %>%
+      hchart(name = "Sunshine Duration", 'areaspline', 
+             hcaes(x = month, y = duration), showInLegend = TRUE) %>%
+      hc_title(text = "Average Sunshine Duration for each Month") %>%
       hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
                   /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>') %>%
       hc_chart(zoomType = "x") %>%
@@ -242,5 +244,20 @@ shinyServer(function(input, output) {
   
   ############################## Tour Page Outputs ##############################
   
-  
+  output$arrival <- renderHighchart({
+    vic_arrival %>%
+      hchart("spline", hcaes(x = time, y = visitor_arrival)) %>%
+      hc_tooltip(headerFormat = as.character(tags$small("{point.x:%B %Y}")),
+                 pointFormat = "<br/>Oversea Visitors Arrival 
+                 (Thousands): <b>{point.visitor_arrival}</b>") %>%
+      hc_chart(zoomType = "x") %>%
+      hc_title(text = "Victoria Oversea Visitor Arrivals") %>%
+      hc_subtitle(text = 'Source: <a href="https://www.abs.gov.au/statistics
+                  /industry/tourism-and-transport/overseas-arrivals-and-departures
+                  -australia/latest-release" target="_blank">Bureau of Statistics</a>') %>%
+      hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
+      hc_yAxis(title = list(text = "Oversea Visitor Arrivals (Thousands)")) %>%
+      hc_xAxis(title = list(text = "Time")) %>%
+      hc_colors("#6495ED")
+  })
 })

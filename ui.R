@@ -26,11 +26,11 @@ header <- dashboardHeader(
   # Define the header and insert image as title
   title = tags$a(tags$img(src='https://bit.ly/3rFI94P',
                           height='55', width='160')),
-  titleWidth = 280
+  titleWidth = 250
 )
 
 sidebar <- dashboardSidebar(
-  width = 280,
+  width = 250,
   sidebarMenu(
     # Tab for different visualisation
     menuItem("Home",
@@ -150,9 +150,10 @@ body <- dashboardBody(
                 column(2)
               ),
               hr(),
-              highchartOutput("rainfall_average"),
-              hr(),
-              highchartOutput("sunshine"),
+              fluidRow(
+                column(6, highchartOutput("rainfall_average")),
+                column(6, highchartOutput("sunshine"))
+              ),
               hr(),
               h5('Live Weather Data Source: ', 
                  a("OpenWeather",
@@ -171,7 +172,11 @@ body <- dashboardBody(
               titlePanel(strong("Tourism Industry is Slowly Recovering")),
               hr(),
               highchartOutput("arrival"),
-              hr()
+              hr(),
+              h5('Charts are created using ', 
+                 a("Highcharter", 
+                   href="https://jkunst.com/highcharter/"), 
+                 '(a R wrapper for Highcharts)')
             )
         )
     )

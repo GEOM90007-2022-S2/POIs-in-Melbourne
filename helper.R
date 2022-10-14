@@ -14,7 +14,6 @@ retail_data <- read.csv('data/retail_poi.csv')
 fountain_data <- read.csv('data/Drinking_fountains.csv')
 toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
-vic_arrival <- read.csv('data/vic-arrival.csv')
 minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
 rainfall <- read.csv('data/average_rainfall.csv')
@@ -34,6 +33,9 @@ forecast_df <- data.frame(
 )
 forecast_df$tmstmp <- ymd_hms(forecast_df$tmstmp)
 forecast_df$tmstmp <- as.POSIXlt(forecast_df$tmstmp, tz="Australia/Sydney")
+
+vic_arrival <- read.csv('data/vic-arrival.csv')
+vic_arrival$time <- my(vic_arrival$time)
 
 # Read weather dataset
 maxTemp_data <- read.csv('data/weather_data/max_temp.csv')
