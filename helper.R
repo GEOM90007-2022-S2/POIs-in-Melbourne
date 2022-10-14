@@ -46,6 +46,10 @@ maxTemp_data$Date = as.Date(with(maxTemp_data, paste(Year,Month,Day,sep="-")),"%
 minTemp_data$Date = as.Date(with(minTemp_data, paste(Year,Month,Day,sep="-")),"%Y-%m-%d")
 rainfall_data$Date = as.Date(with(rainfall_data, paste(Year,Month,Day,sep="-")),"%Y-%m-%d")
 
+# Read pedestrian dataset
+traffic_2022_data = read.csv('data/Pedestrian_Counting_System_-_Monthly__counts_per_hour_2022_aggr.csv')
+
+# Load icons
 landmarkIcon <- makeIcon(
   "www/landmark.png",
   iconWidth = 20,

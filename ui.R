@@ -45,7 +45,10 @@ sidebar <- dashboardSidebar(
              icon = fa_i('fas fa-sun')),
     menuItem("Tourism Industry Recovery",
              tabName = "tour",
-             icon = fa_i('fas fa-plane'))
+             icon = fa_i('fas fa-plane')),
+    menuItem("Traffic Tracker",
+             tabName = "traffic",
+             icon = fa_i("fas fa-car"))
   )
 )
 
@@ -178,7 +181,11 @@ body <- dashboardBody(
                    href="https://jkunst.com/highcharter/"), 
                  '(a R wrapper for Highcharts)')
             )
-        )
+        ),
+    tabItem("traffic",
+            leafletOutput("traffic_map", height = 350),
+            highchartOutput("traffic_day_hour", height = 450)
+      )
     )
 )
 

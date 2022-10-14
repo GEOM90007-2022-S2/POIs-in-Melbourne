@@ -264,4 +264,36 @@ shinyServer(function(input, output) {
       hc_xAxis(title = list(text = "Time")) %>%
       hc_colors("#6495ED")
   })
+
+  ############################## Traffic Page Outputs ###########################
+  output$traffic_map = renderLeaflet({
+    
+    tdata = traffic_2022_data %>% group_by(Sensor_Name, latitude, longitude) %>% summarise()
+    leaflet() %>%
+      setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
+      addProviderTiles(providers$CartoDB.Voyager,
+                       options = providerTileOptions(noWrap = TRUE)) %>%
+      addMarkers(data = tdata, ~longitude, ~latitude)
+  })
+  
+  output$traffic_day_hour = renderHighchart({
+    day_of_week_order = c('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+    data = traffic_2022_data %>% 
+            group_by(Day, Time) %>% 
+            dplyr::summarize(hourly_counts_mean = round(mean(Hourly_Counts, na.rm=TRUE))) %>%
+            arrange(match(Day, day_of_week_order))
+    
+    data %>%
+      hchart("heatmap", hcaes(x=Day,y=Time,value=hourly_counts_mean)) %>%
+      hc_yAxis(title = list(text = "Time"), categories = c(0:23)) %>%
+      hc_xAxis(title = list(text = "Day of Week"), categories = day_of_week_order) %>%
+      hc_tooltip(headerFormat = "<b>Traffic</b>",
+                 pointFormat = "<br/><b>Time: {point.Time}</b><br/>Average Visit Counts: <b>{point.hourly_counts_mean}</b>")
+      
+    #, categories = list('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+  })
+  
 })
+
+  
+
