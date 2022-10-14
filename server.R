@@ -21,12 +21,26 @@ options(highcharter.global = global)
 shinyServer(function(input, output, session) {
   values = reactiveValues()
   
+  ############################## Update Theme ##############################
+  output$myTheme = renderUI({
+    if (input$displaymode == 'lightMode'){
+      lightTheme
+    } else{
+      darkTheme
+    }
+  })
+  
   ############################## Map Outputs ##############################
   
   # Output Graph of Map
   output$mymap <- renderLeaflet({
+    if (input$displaymode == 'lightMode'){
+      map.provider = providers$CartoDB.Voyager
+    } else{
+      map.provider = providers$CartoDB.DarkMatter
+    }
     leaflet() %>% setView(lat= -37.840935, lng = 144.946457, zoom = 11) %>%
-      addProviderTiles(providers$CartoDB.Voyager,
+      addProviderTiles(map.provider,
                        options = providerTileOptions(noWrap = TRUE))
   })
   
@@ -34,9 +48,14 @@ shinyServer(function(input, output, session) {
   
   # Output Graph of POI
   output$poi_viz <- renderLeaflet({
+    if (input$displaymode == 'lightMode'){
+      map.provider = providers$CartoDB.Voyager
+    } else{
+      map.provider = providers$CartoDB.DarkMatter
+    }
     leaflet() %>%
       setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
-      addProviderTiles(providers$CartoDB.Voyager,
+      addProviderTiles(map.provider,
                        options = providerTileOptions(noWrap = TRUE)) %>%
       
       # Add marker for different categories of location
@@ -128,31 +147,12 @@ shinyServer(function(input, output, session) {
     )
   )
   
-  # Output Graph of weather
-  #output$weather_plot <- renderHighchart({
-  #  
-    # Process Data
-  #  maxTemp_data$Quality_max <- maxTemp_data$Quality
-  #  minTemp_data$Quality_min <- minTemp_data$Quality
-  #  temp.data <- maxTemp_data %>% left_join(minTemp_data, by = 'Date') %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-  #  temp.data$maxTemp = temp.data$Maximum.temperature..Degree.C.
-  #  temp.data$minTemp = temp.data$Minimum.temperature..Degree.C.
-  #  rainfall <- rainfall_data %>% filter(input$dates[1]<=Date & Date<=input$dates[2])
-    
-  #  col <- c("#eb8787", "#87CEEB")
-  #  highchart() %>%
-  #    hc_title(text = "Forecast Daily Maximum & Minimum Temperature") %>%
-  #    hc_add_series(temp.data, name = "Maximum Temperature", "spline", 
-  #                  hcaes(x = Date, y = maxTemp)) %>%
-  #    hc_add_series(temp.data, name = "Minimum Temperature", "spline", 
-  #                  hcaes(x = Date, y = minTemp)) %>%
-  #    hc_tooltip(headerFormat = as.character(tags$small(""))) %>%
-  #    hc_xAxis(dateTimeLabelFormats = list(day = '%d %b %y'), type = "datetime") %>%
-  #    hc_tooltip(shared = TRUE) %>%
-  #    hc_colors(col)
-  #})
-  
   output$weather_forecast <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     forecast_df$tmstmp <- datetime_to_timestamp(forecast_df$tmstmp)
     
     forecast_df %>%
@@ -170,10 +170,16 @@ shinyServer(function(input, output, session) {
       hc_tooltip(pointFormat = "<br/>Forecast Temperature: <b>{point.temp} ºC</b>
                  <br/>Feels Like: <b>{point.fl_temp} ºC</b>") %>%
       hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
-      hc_colors("#E6CC00")
+      hc_colors("#E6CC00") %>%
+      hc_add_theme(hc_theme)
   })
   
   output$humidity_forecast <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     forecast_df$tmstmp <- datetime_to_timestamp(forecast_df$tmstmp)
     
     forecast_df %>%
@@ -190,10 +196,16 @@ shinyServer(function(input, output, session) {
                   target="_blank">OpenWeather</a>') %>%
       hc_tooltip(pointFormat = "<br/>Forecast Humidity: <b>{point.humidity}%</b>") %>%
       hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
-      hc_colors("#03A9F4")
+      hc_colors("#03A9F4") %>%
+      hc_add_theme(hc_theme)
   })
   
   output$weather_radial <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     minmax_temp %>%
       hchart(type = "columnrange",
              hcaes(x = date, low = min_temp, high = max_temp, color = mean_temp), 
@@ -208,10 +220,16 @@ shinyServer(function(input, output, session) {
                  <br/>Average Minimum: <b>{point.min_temp} ºC</b>") %>%
       hc_title(text = "Average Temperature For the Past 5 Years") %>%
       hc_subtitle(text = 'Source: <a href="http://www.bom.gov.au/climate
-                  /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>')
+                  /averages/tables/cw_086282.shtml" target="_blank">Bureau of Meteorology</a>') %>%
+      hc_add_theme(hc_theme)
   })
   
   output$rainfall_average <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     col <- c("#87CEEB", "#00688B")
     
     highchart() %>%
@@ -230,10 +248,16 @@ shinyServer(function(input, output, session) {
                     hcaes(x = month, y = precipitation), yAxis = 1,
                     tooltip = list(pointFormat = "<br/>Average Rainfall: <b>{point.precipitation} mm</b>")) %>%
       hc_tooltip(shared = TRUE) %>%
-      hc_colors(col)
+      hc_colors(col) %>%
+      hc_add_theme(hc_theme)
   })
   
   output$sunshine <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     sunshine_duration %>%
       hchart(name = "Sunshine Duration", 'areaspline', 
              hcaes(x = month, y = duration), showInLegend = TRUE) %>%
@@ -245,12 +269,18 @@ shinyServer(function(input, output, session) {
       hc_yAxis(title = list(text = "Duration (Hours)")) %>%
       hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
       hc_colors("#FFFF00") %>%
-      hc_tooltip(pointFormat = "Average Daily Sunshine Duration: <b>{point.duration} hours</b>")
+      hc_tooltip(pointFormat = "Average Daily Sunshine Duration: <b>{point.duration} hours</b>") %>%
+      hc_add_theme(hc_theme)
   })
   
   ############################## Tour Page Outputs ##############################
   
   output$arrival <- renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     vic_arrival %>%
       hchart("spline", hcaes(x = time, y = visitor_arrival)) %>%
       hc_tooltip(headerFormat = as.character(tags$small("{point.x:%B %Y}")),
@@ -264,18 +294,23 @@ shinyServer(function(input, output, session) {
       hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
       hc_yAxis(title = list(text = "Oversea Visitor Arrivals (Thousands)")) %>%
       hc_xAxis(title = list(text = "Time")) %>%
-      hc_colors("#6495ED")
+      hc_colors("#6495ED") %>%
+      hc_add_theme(hc_theme)
   })
 
   ############################## Traffic Page Outputs ###########################
   output$trafficMap = renderLeaflet({
-    
+    if (input$displaymode == 'lightMode'){
+      map.provider = providers$CartoDB.Voyager
+    } else{
+      map.provider = providers$CartoDB.DarkMatter
+    }
     tdata = traffic_2022_data %>% group_by(Sensor_Name, latitude, longitude) %>% summarise()
     tdata$popup <- paste0('<b>', tdata$Sensor_Name, '</b><br/>',
                               'Location: ', tdata$latitude, ', ', tdata$longitude)
     leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
       setView(lat= -37.8080, lng = 144.9567, zoom = 13.5) %>%
-      addProviderTiles(providers$CartoDB.Voyager,
+      addProviderTiles(map.provider,
                        options = providerTileOptions(noWrap = TRUE)) %>%
       addMarkers(data = tdata, ~longitude, ~latitude, popup=~popup, icon = sensorIcon)
   })
@@ -294,6 +329,11 @@ shinyServer(function(input, output, session) {
   
   
   output$traffic_day_hour = renderHighchart({
+    if (input$displaymode == "lightMode"){
+      hc_theme = hc_theme_smpl()
+    } else{
+      hc_theme = hc_theme_db()
+    }
     day_of_week_order = c('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
     sensorSelected = input$pdsensor
     tgdata = filter(traffic_2022_data, Sensor_Name == sensorSelected)
@@ -309,7 +349,8 @@ shinyServer(function(input, output, session) {
       hc_xAxis(title = list(text = "Day of Week"), categories = day_of_week_order) %>%
       hc_tooltip(headerFormat = paste("<b>", sensorSelected, "</b>"),
                  pointFormat = "<br/><b>Average Pedestrian Counts @ {point.Time}00: {point.hourly_counts_mean} persons</b>") %>%
-      hc_plotOptions(series = list(animation = F))
+      hc_plotOptions(series = list(animation = F)) %>%
+      hc_add_theme(hc_theme)
   })
   
 })

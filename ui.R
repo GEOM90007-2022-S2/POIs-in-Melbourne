@@ -48,12 +48,17 @@ sidebar <- dashboardSidebar(
              icon = icon("users")),
     menuItem("Tourism Industry Recovery",
              tabName = "tour",
-             icon = icon('plane'))
+             icon = icon('plane')),
+    menuItem("Setting",
+             tabName = "setting",
+             icon = icon("gear"),
+             radioButtons("displaymode", "Display Mode", choices = c('Light Mode' = 'lightMode', 'Dark Mode' = 'darkMode'), selected="lightMode")
+             )
   )
 )
 
 body <- dashboardBody(
-  customTheme,
+  uiOutput("myTheme"),
   tabItems(
     # Structure for home tab
     tabItem("home",
