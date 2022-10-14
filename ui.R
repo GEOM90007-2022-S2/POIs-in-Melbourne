@@ -36,19 +36,19 @@ sidebar <- dashboardSidebar(
     menuItem("Home",
              tabName = "home",
              selected = T,
-             icon = fa_i('fas fa-house')),
+             icon = icon('thumbs-up')),
     menuItem("Places to Visit",
              tabName = "poi",
-             icon = fa_i('fas fa-map-location-dot')),
+             icon = icon('map-location-dot')),
     menuItem("Melbourne Weather",
              tabName = "weather",
-             icon = fa_i('fas fa-sun')),
+             icon = icon('sun')),
+    menuItem("Pedestrian Volume Monitor",
+             tabName = "traffic",
+             icon = icon("users")),
     menuItem("Tourism Industry Recovery",
              tabName = "tour",
-             icon = fa_i('fas fa-plane')),
-    menuItem("Traffic Tracker",
-             tabName = "traffic",
-             icon = fa_i("fas fa-car"))
+             icon = icon('plane'))
   )
 )
 
