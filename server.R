@@ -274,7 +274,7 @@ shinyServer(function(input, output, session) {
     tdata$popup <- paste0('<b>', tdata$Sensor_Name, '</b><br/>',
                               'Location: ', tdata$latitude, ', ', tdata$longitude)
     leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
-      setView(lat= -37.8080, lng = 144.946457, zoom = 13.5) %>%
+      setView(lat= -37.8080, lng = 144.9567, zoom = 13.5) %>%
       addProviderTiles(providers$CartoDB.Voyager,
                        options = providerTileOptions(noWrap = TRUE)) %>%
       addMarkers(data = tdata, ~longitude, ~latitude, popup=~popup, icon = sensorIcon)

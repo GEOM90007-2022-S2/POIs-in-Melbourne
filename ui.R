@@ -188,7 +188,7 @@ body <- dashboardBody(
             h5("This Pedestrian Volume Monitor helps to understand how people use different city locations at different times of day to better inform decision-making and plan for the future.",
                style = "color: #808080;font-size:15px;"),
             hr(),
-            leafletOutput("trafficMap", height = 350),
+            leafletOutput("trafficMap", height = 500),
             hr(),
             selectInput("pdsensor", "Select Sensor Place", choices = c(sort(unique(traffic_2022_data$Sensor_Name))), multiple=F, selected="231 Bourke St"),
             highchartOutput("traffic_day_hour", height = 450)
