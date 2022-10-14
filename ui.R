@@ -146,8 +146,8 @@ body <- dashboardBody(
               #highchartOutput('weather_plot'),
               #hr(),
               fluidRow(
-                column(6, highchartOutput("weather_forecast")),
-                column(6, highchartOutput("humidity_forecast"))
+                column(6, highchartOutput("weather_forecast", height = 300)),
+                column(6, highchartOutput("humidity_forecast", height = 300))
               ),
               hr(),
               h4(strong("Melbourne Historical Weather Observations")),

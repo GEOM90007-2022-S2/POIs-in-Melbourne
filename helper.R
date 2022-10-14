@@ -295,7 +295,7 @@ darkTheme = shinyDashboardThemeDIY(
   ,sidebarPadding = "0"
   
   ,sidebarMenuBackColor = "transparent"
-  ,sidebarMenuPadding = "0"
+  ,sidebarMenuPadding = "2"
   ,sidebarMenuBorderRadius = 0
   
   ,sidebarShadowRadius = ""
@@ -308,7 +308,7 @@ darkTheme = shinyDashboardThemeDIY(
   ,sidebarSearchBorderColor = "#DCDCDC"
   
   ,sidebarTabTextColor = "#CDCDCD"
-  ,sidebarTabTextSize = "14"
+  ,sidebarTabTextSize = "15"
   ,sidebarTabBorderStyle = "none"
   ,sidebarTabBorderColor = "none"
   ,sidebarTabBorderWidth = "0"
@@ -338,7 +338,7 @@ darkTheme = shinyDashboardThemeDIY(
   ,boxDangerColor = "rgb(240,80,80)"
   
   ,tabBoxTabColor = "rgb(52,62,72)"
-  ,tabBoxTabTextSize = 14
+  ,tabBoxTabTextSize = 15
   ,tabBoxTabTextColor = "rgb(205,205,205)"
   ,tabBoxTabTextColorSelected = "rgb(205,205,205)"
   ,tabBoxBackColor = "rgb(52,62,72)"
