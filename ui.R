@@ -181,6 +181,14 @@ body <- dashboardBody(
               hr(),
               highchartOutput("arrival"),
               hr(),
+              fluidRow(
+                includeHTML("tourism-recovery.html"),
+                tags$head(
+                  tags$link(rel = "stylesheet", 
+                            type = "text/css", 
+                            href = "plugins/font-awesome-4.7.0/css/font-awesome.min.css")
+                )
+              ),
               h5('Charts are created using ', 
                  a("Highcharter", 
                    href="https://jkunst.com/highcharter/"), 
