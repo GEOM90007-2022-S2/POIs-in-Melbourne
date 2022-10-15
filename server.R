@@ -73,8 +73,6 @@ shinyServer(function(input, output, session) {
                  label = visitorcenterLabels, group = "<img src='information.png' height='16' width='16'> Visitor Information Booth<hr><strong>Utilities</strong>") %>%
       addMarkers(data = wifi_data, ~Longitude, ~Latitude, 
                  icon = wifiIcon, group = "<img src='wifi.png' height='16' width='16'> Public Wifi Location") %>%
-      addMarkers(data = shuttle_data, ~long, ~lat, icon = shuttleIcon,
-                 label = shuttleLabels, group = "<img src='bus.png' height='16' width='16'> Melbourne Visitor Shuttle") %>%
       addMarkers(data = city_circle, ~long, ~lat, icon = tramIcon,
                  label = ~NAME, group = "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
       addMarkers(data = toilet_data, ~lon, ~lat, icon = toiletIcon,
@@ -96,7 +94,6 @@ shinyServer(function(input, output, session) {
                           "<img src='fountain.png' height='16' width='16'> Drinking Fountain",
                           "<img src='toilet.png' height='16' width='16'> Public Toilet",
                           "<img src='tram.png' height='16' width='16'> City Circle Tourist Tram",
-                          "<img src='bus.png' height='16' width='16'> Melbourne Visitor Shuttle",
                           "<img src='track.png' height='16' width='16'> Tram Route"),
         options = layersControlOptions(collapsed = FALSE)
       ) %>%
@@ -105,8 +102,7 @@ shinyServer(function(input, output, session) {
       hideGroup("<img src='tram.png' height='16' width='16'> City Circle Tourist Tram") %>%
       hideGroup("<img src='track.png' height='16' width='16'> Tram Route") %>%
       hideGroup("<img src='fountain.png' height='16' width='16'> Drinking Fountain") %>%
-      hideGroup("<img src='toilet.png' height='16' width='16'> Public Toilet") %>%
-      hideGroup("<img src='bus.png' height='16' width='16'> Melbourne Visitor Shuttle")
+      hideGroup("<img src='toilet.png' height='16' width='16'> Public Toilet")
   })
   
   ############################## Weather Outputs ##############################

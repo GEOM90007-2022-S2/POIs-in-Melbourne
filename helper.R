@@ -14,7 +14,6 @@ retail_data <- read.csv('data/retail_poi.csv')
 fountain_data <- read.csv('data/Drinking_fountains.csv')
 toilet_data <- read.csv('data/Public_toilets.csv')
 tram_track <- readOGR('data/Tram tracks.geojson')
-shuttle_data <- read.csv('data/cleaned_bus_shuttle.csv')
 minmax_temp <- read.csv('data/min_max_average_temp.csv')
 minmax_temp$date <- ymd(minmax_temp$date)
 rainfall <- read.csv('data/average_rainfall.csv')
@@ -156,11 +155,6 @@ retailLabels <- sprintf(
   "Location: <strong>%s</strong><br/>Location Type: <strong>%s</strong>
   <br/><img src=%s height='176.5' width='300'>",
   retail_data$feature_name, retail_data$theme, retail_data$url
-) %>% lapply(htmltools::HTML)
-
-shuttleLabels <- sprintf(
-  "Stop name: <strong>%s</strong><br/>Stop number: <strong>%s</strong>",
-  shuttle_data$Name, shuttle_data$Stop.Number
 ) %>% lapply(htmltools::HTML)
 
 # Theme for dashboard (Light)
