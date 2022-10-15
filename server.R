@@ -280,8 +280,7 @@ shinyServer(function(input, output, session) {
     vic_arrival %>%
       hchart("spline", hcaes(x = time, y = visitor_arrival)) %>%
       hc_tooltip(headerFormat = as.character(tags$small("{point.x:%B %Y}")),
-                 pointFormat = "<br/>Oversea Visitors Arrival 
-                 (Thousands): <b>{point.visitor_arrival}</b>") %>%
+                 pointFormat = "<br/>Oversea Visitors Arrival: <b>{point.visitor_arrival}k</b>") %>%
       hc_chart(zoomType = "x") %>%
       hc_title(text = "Victoria Oversea Visitor Arrivals") %>%
       hc_subtitle(text = 'Source: <a href="https://www.abs.gov.au/statistics
