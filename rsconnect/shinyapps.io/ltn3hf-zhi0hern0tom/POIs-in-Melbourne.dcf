@@ -5,9 +5,9 @@ account: ltn3hf-zhi0hern0tom
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7253674
-bundleId: 6406066
+bundleId: 6406152
 url: https://ltn3hf-zhi0hern0tom.shinyapps.io/POIs-in-Melbourne/
-when: 1665841789.64241
-lastSyncTime: 1665841789.64242
+when: 1665844343.51442
+lastSyncTime: 1665844343.51443
 asMultiple: FALSE
 asStatic: FALSE

@@ -49,6 +49,10 @@ sidebar <- dashboardSidebar(
     menuItem("Tourism Industry Recovery",
              tabName = "tour",
              icon = icon('plane')),
+    menuItem("FAQs",
+             tabName = "faqs",
+             icon = icon("question")
+    ),
     menuItem("Setting",
              tabName = "setting",
              icon = icon("gear"),
@@ -125,26 +129,6 @@ body <- dashboardBody(
                 column(3, valueBoxOutput("sunset", width = 14))
               ),
               hr(),
-              # Add Interaction Bar
-              #fluidRow(
-              #  column(width=12,
-                       # Selection between Years
-                       # selectInput('weatherYear','Start Year', choices = c(unique(maxTemp_data$Year)), multiple = F,selected = '2022'),
-                       # # Selection between Months
-                       # selectInput('weatherMonth','Start Month', choices = c(unique(maxTemp_data$Month)),multiple = F, selected = '10'),
-                       # # Selection between Days 
-                       # selectInput('weatherDay','Start Day', choices = c(unique(maxTemp_data$Day)), multiple = F, selected = '9'),
-                       # Selection between Date
-              #         dateRangeInput(
-              #           inputId = "dates",
-              #           label = h3("Date range"),
-              #           start = format(Sys.time(), "%Y-%m-%d"),
-              #           end = format(Sys.time() + days(10), "%Y-%m-%d"),
-              #           min = "2013-01-01",
-              #           max = "2023-12-31"),
-              #)
-              #highchartOutput('weather_plot'),
-              #hr(),
               fluidRow(
                 column(6, highchartOutput("weather_forecast", height = 300)),
                 column(6, highchartOutput("humidity_forecast", height = 300))
@@ -204,7 +188,65 @@ body <- dashboardBody(
             leafletOutput("trafficMap", height = 500),
             hr(),
             selectInput("pdsensor", "Select Sensor Place", choices = c(sort(unique(traffic_2022_data$Sensor_Name))), multiple=F, selected="231 Bourke St"),
-            highchartOutput("traffic_day_hour", height = 450)
+            highchartOutput("traffic_day_hour", height = 450),
+            hr(),
+            h5('Maps are created using ',
+               a('Leaflet',
+                 href="https://rstudio.github.io/leaflet/")
+            ),
+            h5('Charts are created using ', 
+               a("Highcharter", 
+                 href="https://jkunst.com/highcharter/"), 
+               '(a R wrapper for Highcharts)')
+      ),
+    tabItem("faqs",
+            titlePanel(strong("Frequently Asked Questions")),
+            hr(),
+            h3("What is this dashboard used for?"),
+            p("The implemented dashboard aims to help tourists to discover interesting and practical information about the City of Melbourne."),
+            hr(),
+            h3("What are the data sources?"),
+            tags$p("Our datasets are mainly provided by ", 
+                   tags$a(href="https://data.melbourne.vic.gov.au/",
+                          "City of Melbourne"), 
+                   ", ",
+                   tags$a(href="https://data.vic.gov.au/",
+                          "Victorian Government Open Data"),
+                   ", ",
+                   tags$a(href="https://openweathermap.org",
+                         "OpenWeather"),
+                   "and ",
+                   tags$a(href="http://www.bom.gov.au",
+                         "Asutralian Government  Bureau of Meteorology"),
+                   "."
+            ),
+            hr(),
+            h3("How is the dashboard built?", align = 'left'),
+            tags$p("All elements including charts and maps are generated using R packages including", 
+                   tags$a(href="https://jkunst.com/highcharter/", "highcharter"), 
+                   "and ",
+                   tags$a(href="https://rstudio.github.io/leaflet/", "leaflet"),
+                   "."),
+            hr(),
+            h3("Where can I find the source code?", align = 'left'),
+            tags$p("You can find the source code at our", 
+                   tags$a(href="https://github.com/GEOM90007-2022-S2/POIs-in-Melbourne", 
+                          "github repo"), 
+                   "."),
+            hr(),
+            h3("Who should I contact if I have any sugguestions?", align = 'left'),
+            tags$p("Any suggestions, feedbacks, complaints or compliments are highly valued and will guide us to improve the dashboard continuously. Please send an email to ", 
+                   tags$a( href="mailto:ztom@student.unimelb.edu.au",
+                           "ztom@student.unimelb.edu.au",
+                           target = '_blank'),
+                   " or ",
+                   tags$a( href="mailto:haonanz1@student.unimelb.edu.au",
+                           "haonanz1@student.unimelb.edu.au",
+                           target = '_blank'),
+                   "."
+            ),
+            hr()
+            
       )
     )
 )
