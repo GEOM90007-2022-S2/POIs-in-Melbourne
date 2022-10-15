@@ -345,7 +345,7 @@ shinyServer(function(input, output, session) {
       hc_xAxis(title = list(text = "Day of Week"), categories = day_of_week_order) %>%
       hc_tooltip(headerFormat = paste("<b>", sensorSelected, "</b>"),
                  pointFormat = "<br/><b>Average Pedestrian Counts @ {point.Time}00: {point.hourly_counts_mean} persons</b>") %>%
-      hc_plotOptions(series = list(animation = F)) %>%
+      hc_plotOptions(series = list(borderRadius = 4, animation = list(duration = 3000))) %>%
       hc_add_theme(hc_theme)
   })
   
