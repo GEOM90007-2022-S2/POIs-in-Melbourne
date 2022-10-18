@@ -16,8 +16,6 @@ library(tidyr)
 library(dashboardthemes)
 source('helper.R')
 
-# Set a global theme highcharter plot
-options(highcharter.theme = hc_theme_hcrt())
 global <- getOption("highcharter.global")
 global$useUTC <- FALSE
 global$timezoneOffset <- -300
@@ -293,7 +291,9 @@ shinyServer(function(input, output, session) {
                   -australia/latest-release" target="_blank">Bureau of Statistics</a>') %>%
       hc_plotOptions(series = list(animation = list(duration = 3000))) %>%
       hc_yAxis(title = list(text = "Oversea Visitor Arrivals (Thousands)")) %>%
-      hc_xAxis(title = list(text = "Time")) %>%
+      hc_xAxis(title = list(text = "Time"), 
+               plotLines = list(list(label = list(text = "WHO Declares Pandemic"),
+                                     color = "#FF0000", width = 2, value = datetime_to_timestamp(my("Mar 2020"))))) %>%
       hc_colors("#6495ED") %>%
       hc_add_theme(hc_theme)
   })
