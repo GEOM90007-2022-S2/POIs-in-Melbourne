@@ -2,12 +2,16 @@
 
 This group assignment aims to develop an interactive visualisation interface that will be tailored to the tourists that would like to visiting Melbourne.
 
-Link to dashboard: [here](https://ltn3hf-zhi0hern0tom.shinyapps.io/POIs-in-Melbourne/?_ga=2.77036565.1052749425.1665295363-65939600.1664778989)
-Report Link: [here](https://www.overleaf.com/5644131866tnhwmcmrxkgp)
-
 ## Group Members
 Group Number: 78
 - Haonan Zhong (867492)
 - Mian Chen (941099)
 - Zhi Hern Tom (1068268)
 - Kuizong Wu
+
+## How to run?
+
+-   Please first install all the required packages via `Package Install Commands.Rmd`, simply run the cell to install the required packages.
+-   To run the Shiny App, please locate `ui.R`, and click `Run App` command in RStudio.
+-   If anything went wrong while launching the app, please view my Shiny App via `shinyapps.io`.
+-   `shinyapps.io` link: <https://ltn3hf-zhi0hern0tom.shinyapps.io/POIs-in-Melbourne/>

@@ -1,6 +1,7 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
+# UI
+# You can run the application by clicking 'Run App' above.
+# But PLEASE follow the instructions given in README.md
+# And install all the required packages via "Package Install Commands.Rmd"
 
 # Importing libraries
 library(shiny)
@@ -173,6 +174,7 @@ body <- dashboardBody(
                             href = "plugins/font-awesome-4.7.0/css/font-awesome.min.css")
                 )
               ),
+              hr(),
               h5('Charts are created using ', 
                  a("Highcharter", 
                    href="https://jkunst.com/highcharter/"), 

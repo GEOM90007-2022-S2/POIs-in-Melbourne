@@ -1,0 +1,22 @@
+---
+title: "Package Install Script"
+author: "Haonan Zhong"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# Please run the cell to install the required packages
+
+options(install.packages.compile.from.source = "always")
+install.packages("igraph", type = "binary")
+packages <- c("shiny", "shinythemes", "leaflet", "plotly", "ggplot2", 
+              "dplyr", "owmr", "rgdal", "lubridate", "fontawesome", "shinyWidgets",
+              "shinydashboard", "dplyr", "tidyr", "stringr", "highcharter", "dashboardthemes")
+new.packages <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+```

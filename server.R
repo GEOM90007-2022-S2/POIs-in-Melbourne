@@ -1,3 +1,8 @@
+# server
+# You can run the application by clicking 'Run App' above.
+# But PLEASE follow the instructions given in README.md
+# And install all the required packages via "Package Install Commands.Rmd"
+
 # Importing libraries
 library(shiny)
 library(stringr)
