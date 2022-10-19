@@ -2,6 +2,8 @@
 
 This group assignment aims to develop an interactive visualisation interface that will be tailored to the tourists that would like to visiting Melbourne.
 
+- Presentation Slides: [Here](https://docs.google.com/presentation/d/1wT9yJAo9U4SCQWTW7PmS5hHtSjQMs0KkdJdXzy3l5mk/edit?usp=sharing)
+
 ## Group Members
 Group Number: 78
 - Haonan Zhong (867492)
