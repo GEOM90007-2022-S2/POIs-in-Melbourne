@@ -9,7 +9,7 @@ Group Number: 78
 - Haonan Zhong (867492)
 - Mian Chen (941099)
 - Zhi Hern Tom (1068268)
-- Kuizong Wu
+- Kuizong Wu (1323712)
 
 ## How to run?
 
