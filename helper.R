@@ -160,7 +160,7 @@ retailLabels <- sprintf(
 # Theme for dashboard (Light)
 lightTheme <- shinyDashboardThemeDIY(
   ### general
-  appFontFamily = "Optima"
+  appFontFamily = "Calibri"
   ,appFontColor = "#2D2D2D"
   ,primaryFontColor = "#000000"
   ,infoFontColor = "#000000"
@@ -263,7 +263,7 @@ lightTheme <- shinyDashboardThemeDIY(
 darkTheme = shinyDashboardThemeDIY(
   
   ### general
-  appFontFamily = "Optima"
+  appFontFamily = "Calibri"
   ,appFontColor = "#CDCDCD"
   ,primaryFontColor = "#FFFFFF"
   ,infoFontColor = "#FFFFFF"

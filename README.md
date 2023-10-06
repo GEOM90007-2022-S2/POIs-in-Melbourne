@@ -16,4 +16,4 @@ Group Number: 78
 -   Please first install all the required packages via `Package Install Commands.Rmd`, simply run the cell to install the required packages.
 -   To run the Shiny App, please locate `ui.R`, and click `Run App` command in RStudio.
 -   If anything went wrong while launching the app, please view my Shiny App via `shinyapps.io`.
--   `shinyapps.io` link: <https://ltn3hf-zhi0hern0tom.shinyapps.io/POIs-in-Melbourne/>
+-   `shinyapps.io` link: <https://greysonchung.shinyapps.io/POIs-in-Melbourne/>

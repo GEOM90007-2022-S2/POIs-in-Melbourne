@@ -1,0 +1,12 @@
+name: POIs-in-Melbourne
+title: POIs-in-Melbourne
+username: greysonchung
+account: greysonchung
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7313284
+bundleId: 7770259
+url: https://greysonchung.shinyapps.io/POIs-in-Melbourne/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
